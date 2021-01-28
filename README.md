@@ -69,7 +69,8 @@ This Should reflect in some part the real world property name so its intent is c
 
 
 
-**value**  			:  The property value to pass in for the override. 
+**value**  			:  The property value to pass in for the override.
+
 **duration** 		:   The duration value for a hype API setElementProperty. 
 
 This comes after the value and is separated by a comma. 			
@@ -98,27 +99,6 @@ This comes after the value and is separated by a comma.
 | data-text2_innerhtml              | Hello my lovely world                                        |
 | data-square_zindex                | -20                                                          |
 | data-text_innertext               | foo some string or words                                     |
-
-
-
-```
-data-text_innertext					|    foo some string or words    
-data-rect_url       				|   ${resourcesFolderName}/foo.png   
-data-text_bgcolor						|   pink      
-data-rect1_width						|   400    
-data-rect1_height						|   400   
-data-rect1_url							|   ${resourcesFolderName}/foo2.png      
-data-rect1_backgroundsize		|   contain       
-data-rect1_backgroundrepeat	|   no-repeat        
-data-rect_rotatez						|	20        
-data-text2_innertext				|	foo other string  or words       
-data-rect1_scalex						|   2,8  
-data-rect1_scaley						|   2,8    
-data-text_color							|   rgb(233, 205, 85)  
-data-text_innerhtml					|   <span style="color:white;font-weight:bold">Girl</span> <span style="color:gold;font-weight:bold">Skateboarding</span>
-data-text2_innerhtml				|   Hello my lovely world    
-data-square_zindex					| 	-20
-```
 
 ####  Element data attribute:
 
