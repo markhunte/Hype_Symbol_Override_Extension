@@ -9,11 +9,31 @@ Although Hype Symbol instances share all the same HTML properties, childrencelem
 
 It is often the case that you want each instance to use different parameters  when they appear on scene.
 
-At the moment there is no direct way to do this with Symbol instances.
+ 
 
 <hr>
 
 This extension gives you a way to easily override many of the Symbol instance's properties.
+
+
+
+*Four instances of a single Symbol.*
+
+<img src="README.assets/Screenshot 2021-01-28 at 23.41.27.jpg" alt="Screenshot 2021-01-28 at 23.41.27" style="zoom:50%;" />
+
+
+
+With the Extension and on Symbol load.
+
+
+
+<img src="README.assets/Screenshot 2021-01-28 at 23.41.11.jpg" alt="Screenshot 2021-01-28 at 23.41.11" style="zoom:50%;" />
+
+
+
+![Untitled 2](README.assets/Untitled 2.png)
+
+
 
  Individual Symbol instance properies can be overriden to allow each instance of the symbol to  be displayed differently and behave differently from each other at load time.
 
