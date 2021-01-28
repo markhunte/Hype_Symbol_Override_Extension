@@ -41,70 +41,118 @@ A Symbol Instance is an instance on a scene of a single Symbol in the resouce pa
 
 
 
-Symbol data attribute:
+#### Symbol data attribute:
 
-  * @desc dataset name and value to use for an override from the parent Symbol Instance
-  * @param   data-elementRef		: Must start with 'data-'.  The arbitry name you give to refence an element. this does not have to match any real id you have given the element.
-  * @param  _propertyTag			: Must start with '_'  ( underscore). The name of the property. This Should refect in some part the real world property name so its intent is clear.
-  * @param  value					: The property value to pass in for the override. 
-    *param duration 	                : The duration value for a hype API setElementProperty. This comes after the value and separated by a comma. 						
-  
-  	* @construction   data-elementRef_propertyTag | value
-  	* @construction   data-elementRef_propertyTag | value,duration
+Dataset name and value to use for an override from the parent Symbol Instance
+
+**constructions**
+
+<hr>
+
+*data-elementRef_propertyTag | value*
+
+*data-elementRef_propertyTag | value,duration*
+
+<hr>
+
+###### ***data-elementRef_propertyTag***
 
 
-  	
- Examples
 
-data-text_innertext			|    foo some string or words    
-data-rect_url       		|   ${resourcesFolderName}/foo.png   
-data-text_bgcolor			|   pink      
-data-rect1_width			|   400    
-data-rect1_height			|   400   
-data-rect1_url				|   ${resourcesFolderName}/foo2.png      
-data-rect1_backgroundsize	|   contain       
+**data-**    : All names must start with this.
+
+**elementRef_** : The arbitry name you give to refence an element. this does not have to match any real id you have given the element.   Must end with **underscore**
+
+**propertyTag**   :The name of the property. 
+
+This Should reflect in some part the real world property name so its intent is clear.
+
+
+
+**value**  			:  The property value to pass in for the override. 
+**duration** 		:   The duration value for a hype API setElementProperty. 
+
+This comes after the value and is separated by a comma. 			
+
+<hr>  	
+
+####  Symbol data attribute examples:
+
+
+
+| ***data-elementRef_propertyTag*** | Value                                                        |
+| --------------------------------- | ------------------------------------------------------------ |
+| data-rect_url                     | ${resourcesFolderName}/foo.png                               |
+| data-text_bgcolor                 | pink                                                         |
+| data-rect1_width                  | 400                                                          |
+| data-rect1_height                 | 400                                                          |
+| data-rect1_url                    | ${resourcesFolderName}/foo2.png                              |
+| data-rect1_backgroundsize         | contain                                                      |
+| data-rect1_backgroundrepeat       | no-repea                                                     |
+| data-rect_rotatez                 | 20                                                           |
+| data-text2_innertext              | foo other string  or words                                   |
+| data-rect1_scalex                 | 2,8                                                          |
+| data-rect1_scaley                 | 2,8                                                          |
+| data-text_color                   | rgb(233, 205, 85)                                            |
+| data-text_innerhtml               | `<span style="color:white;font-weight:bold">Girl</span> <span style="color:gold;font-weight:bold">Skateboarding</span>` |
+| data-text2_innerhtml              | Hello my lovely world                                        |
+| data-square_zindex                | -20                                                          |
+| data-text_innertext               | foo some string or words                                     |
+
+
+
+```
+data-text_innertext					|    foo some string or words    
+data-rect_url       				|   ${resourcesFolderName}/foo.png   
+data-text_bgcolor						|   pink      
+data-rect1_width						|   400    
+data-rect1_height						|   400   
+data-rect1_url							|   ${resourcesFolderName}/foo2.png      
+data-rect1_backgroundsize		|   contain       
 data-rect1_backgroundrepeat	|   no-repeat        
-data-rect_rotatez			|	20        
-data-text2_innertext		|	foo other string  or words       
-data-rect1_scalex			|   2,8  
-data-rect1_scaley			|   2,8    
-data-text_color				|   rgb(233, 205, 85)  
-data-text_innerhtml			|   <span style="color:white;font-weight:bold">Girl</span> <span style="color:gold;font-weight:bold">Skateboarding</span> 
-data-text2_innerhtml		|   Hello my lovely world    
-data-square_zindex			| 	-20
-  	  
-*/
+data-rect_rotatez						|	20        
+data-text2_innertext				|	foo other string  or words       
+data-rect1_scalex						|   2,8  
+data-rect1_scaley						|   2,8    
+data-text_color							|   rgb(233, 205, 85)  
+data-text_innerhtml					|   <span style="color:white;font-weight:bold">Girl</span> <span style="color:gold;font-weight:bold">Skateboarding</span>
+data-text2_innerhtml				|   Hello my lovely world    
+data-square_zindex					| 	-20
+```
 
-/**  Elemnet data attribute:
+####  Element data attribute:
 
-  *@desc dataset name and value to use to ACCEPT an override from the parent Symbol Instance
-  *@param  data-elementRef_propertyTag   : This must match a Parent Symbol's override name.  
-  * @param  style 						 : Use the 'style' property name at the beginning if the target property is a native css property.
-  * @param  value 	                     : This value should be the real css property name ,hype-api property name or property name you wish to target. 
-  
-  * @construction   data-elementRef_propertyTag | value
-  * @construction   data-elementRef_propertyTag | style.value
+```
+ @desc dataset name and value to use to ACCEPT an override from the parent Symbol Instance
+ @param  data-elementRef_propertyTag   : This must match a Parent Symbol's override name.  
 
-  
+@param  style 						 : Use the 'style' property name at the beginning if the target property is a native css property.
 
-  *Examples.
+@param  value 	                     : This value should be the real css property name ,hype-api property name or property name you wish to target. 
+
+@construction   data-elementRef_propertyTag | value
+
+@construction   data-elementRef_propertyTag | style.value
+```
+
+   
+
+####  Element data attribute examples:
 
 
-    	  *Examples.
-
-data-text_innertext			|   innerText    
-data-rect_url       		|   background-image   
-data-text_bgcolor			|   style.backgroundColor      
-data-rect1_width			|   width    
-data-rect1_height			|   height   
-data-rect1_url				|   background-image       
-data-rect1_backgroundsize	|   style.background-size      
-data-rect1_backgroundrepeat	|   style.background-repeat       
-data-rect_rotatez			|	rotateZ        
-data-text2_innertext		|	innerText        
-data-rect1_scalex			|   scaleX  
-data-rect1_scaley			|   scaleY   
-data-text_color				|   style.color  
-data-text_innerhtml			|   innerHTML
-data-text2_innerhtml		|   innerHTML    
-data-square_zindex			| 	z-index
+    data-text_innertext					|   innerText    
+    data-rect_url       				|   background-image   
+    data-text_bgcolor						|   style.backgroundColor      
+    data-rect1_width						|   width    
+    data-rect1_height						|   height   
+    data-rect1_url							|   background-image       
+    data-rect1_backgroundsize		|   style.background-size      
+    data-rect1_backgroundrepeat	|   style.background-repeat       
+    data-rect_rotatez						|	rotateZ        
+    data-text2_innertext				|	innerText        
+    data-rect1_scalex						|   scaleX  
+    data-rect1_scaley						|   scaleY   
+    data-text_color							|   style.color  
+    data-text_innerhtml					|   innerHTML
+    data-text2_innerhtml				|   innerHTML    
+    data-square_zindex					| 	z-index
