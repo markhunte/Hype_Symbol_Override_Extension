@@ -70,6 +70,8 @@ The datasets and value are entered  in Additional HTML Attributes in Hype's Iden
 
 
 
+
+
 #### Symbol data attribute:
 
 Symbol's Dataset name and value to use for an override from the parent Symbol Instance
@@ -128,9 +130,21 @@ This comes after the value and is separated by a comma.
 | data-square_zindex          | -20                                                          |
 | data-text_innertext         | foo some string or words                                     |
 
+
+
+<hr>
+
+
+
+
+
 ####  Element data attribute:
 
 Element's Dataset name and value to use to ACCEPT an override from the parent Symbol Instance
+
+
+
+<img src="README.assets/Screenshot 2021-01-28 at 22.48.54.jpg" alt="Screenshot 2021-01-28 at 22.48.54" style="zoom:50%;" />
 
 <hr>
 
