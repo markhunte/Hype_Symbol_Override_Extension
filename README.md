@@ -31,9 +31,7 @@ With the Extension and on Symbol load.
 
 
 
-![Untitled 2](README.assets/Untitled 2.png)
-
-
+ ![rocket2](README.assets/rocket2.gif)
 
  Individual Symbol instance properies can be overriden to allow each instance of the symbol to  be displayed differently and behave differently from each other at load time.
 
