@@ -218,13 +218,7 @@ An error will be thrown in the console giving details and info to help find the 
 
 
 
-
-
-
-
-![Screenshot 2021-01-29 at 01.15.52](README.assets/Screenshot 2021-01-29 at 01.15.52.jpg)
-
-
+ <img src="README.assets/Screenshot 2021-01-29 at 01.14.18-1883315.jpg" alt="Screenshot 2021-01-29 at 01.14.18" style="zoom:50%;" />
 
 
 
