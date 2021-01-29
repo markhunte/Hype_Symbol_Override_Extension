@@ -220,7 +220,11 @@ An error will be thrown in the console giving details and info to help find the 
 
 
 
+
+
 ![Screenshot 2021-01-29 at 01.15.52](README.assets/Screenshot 2021-01-29 at 01.15.52.jpg)
+
+
 
 
 
@@ -239,7 +243,11 @@ You can also change  **print_debug**  to **false**  to turn it off
 
 
 
+
+
 ![Screenshot 2021-01-29 at 01.14.18](README.assets/Screenshot 2021-01-29 at 01.14.18.jpg)
+
+
 
 
 
