@@ -158,13 +158,13 @@ Element's Dataset name and value to use to ACCEPT an override from the parent Sy
 
 <hr>
 
-**data-elementRef_propertyTag**   : This must match a Parent Symbol's name.  
+An element's **data-elementRef_propertyTag**   Must match a Parent Symbol's  *data-elementRef_propertyTag*  
 
 
 
-**style** 						 :  Use the 'style' property name at the beginning if the target property is a native css property. Do not use it for Hype 's *setElementProperty* API properties
+**style** 						 :  Add 'style' property name at the beginning using (.) syntax, if the target property is a native css property. Do not use it for Hype 's *setElementProperty* API properties. 
 
-**value** 	                     :  This value should be the real css property name ,hype Hype 's *setElementProperty* API property names or other HTML property name you wish to target. 
+**value** 	                     :  This value should be the real a Hype 's *setElementProperty* API property names ,a css property name or other HTML property name you wish to target. 
 
 
 
