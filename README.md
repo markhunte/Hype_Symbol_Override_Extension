@@ -43,7 +43,7 @@ With the Extension and on Symbol load.
 
  Individual Symbol instance properies can be overriden to allow each instance of the symbol to  be displayed differently and behave differently from each other at load time.
 
-Each Symbol Instance can be assign dataset key names  (*data-elementRef_*) and values. 
+Each Symbol Instance can be assigned dataset key names  (*data-elementRef_*) and values. 
 
 Any Symbol Instance's children that have the matching dataset key name will use the value to overide it's properties
 
