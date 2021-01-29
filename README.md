@@ -214,7 +214,7 @@ An element's **data-elementRef_propertyTag**   Must match a Parent Symbol's  *da
 An error will occur if there is a mismatch in the dataset key names (*data-elementRef_*)  being used.
 
 An error will be thrown in the console giving details and info to help find the mismatch.
- 	Data for each error overide in a Symbol instance will be shown.
+ 	Data for each error overide in a Symbol instance will be shown.<br>
  	**Symbol ID**<br>
  	**Mismatched key name**<br>
  	**Completed override data accepted** by the children elements<br>
@@ -232,7 +232,7 @@ If **print_debug**  is on ( set to **true** ) The console will give the followin
 
 This is handy if you are not getting the values where you expect.
 
-  Data for each fully Completed overide for a Symbol instance will be shown.
+  Data for each fully Completed overide for a Symbol instance will be shown.<br>
  	**Symbol ID**<br>
  	**Completed override data accepted** by the children elements<br>
  	**Expected overrides sent from** the Symbol to the children elements<br>
