@@ -49,21 +49,28 @@ Any Symbol Instance's children that have the matching dataset key name will use 
 
 Each dataset key name must only be used per child element. Any child element must have its own unique dataset key name.
 
-The overriden properties can be noramal css properties, hypeDocument.setElementProperty() properties or other proberties that can normally be set with javascript.
+The overriden properties can be normal css properties, hypeDocument.setElementProperty() properties or other HTML properties that can normally be set with javascript.
 
-A Symbol Instance is an instance of a single Symbol on a scene . There can be many instances of the same Symbol on a scene.
+A Symbol Instance is an instance of a single Symbol on a scene and there can be many instances of the same Symbol on a scene.
 
-You only have to set up the Symbol and its childrens elements once.
-You can add a new dataset key name and value at any time.
+You only have to set up the Symbol and its children elements once but you can add a new dataset key name and value at any time.
 
- A Symbol's child elements  may have a  dataset key names (*data-elementRef_*) and values  but the Symbol itself does not have to have, use any or all of them.
+ A Symbol's child elements may have dataset key names (*data-elementRef_*) and values  but the Symbol Parent itself does not have to ;  have , use any or all of them.
 Element dataset key names (*data-elementRef_*)   that are used, must match in the Parent Symbol
 
 
 
 <hr>
 
-The datasets and value are entered  in Additional HTML Attributes in Hype's Identity Panel
+The datasets and value are entered  in the **Additional HTML Attributes** in Hype's Identity Panel
+
+
+
+#### **Symbol data attributes:**
+
+Symbol Dataset name and value to use for an override from the parent Symbol Instance.
+
+
 
 <img src="README.assets/Screenshot 2021-01-28 at 22.38.34.jpg" alt="Screenshot 2021-01-28 at 22.38.34" style="zoom:50%;" />
 
@@ -71,9 +78,9 @@ The datasets and value are entered  in Additional HTML Attributes in Hype's Iden
 
 
 
-#### Symbol data attribute:
+#### 
 
-Symbol's Dataset name and value to use for an override from the parent Symbol Instance
+
 
 **constructions**
 
@@ -90,11 +97,11 @@ Symbol's Dataset name and value to use for an override from the parent Symbol In
 
 **data-**    : All names must start with this.
 
-**elementRef_** : The arbitry name you give to refence an element. this does not have to match any real id you have given the element.   Must end with <u>***underscore***</u>
+**elementRef_** : The arbitry name you give to refence an element. this does not have to match any real id you have given to the element.   Must end with <u>***underscore***</u>
 
 **propertyTag**   :The name of the property. 
 
-This Should reflect in some part the real world property name so its intent is clear.
+This should reflect in some part the real world property name so its intent is clear.
 
 
 
@@ -106,7 +113,7 @@ This comes after the value and is separated by a comma.
 
 <hr>  	
 
-####  Symbol data attribute examples:
+####  Some Symbol data attribute examples:
 
 
 
@@ -147,13 +154,13 @@ Element's Dataset name and value to use to ACCEPT an override from the parent Sy
 
 <hr>
 
-**data-elementRef_propertyTag**   : This must match a Parent Symbol's override name.  
+**data-elementRef_propertyTag**   : This must match a Parent Symbol's name.  
 
 
 
-**style** 						 :  Use the 'style' property name at the beginning if the target property is a native css property.
+**style** 						 :  Use the 'style' property name at the beginning if the target property is a native css property. Do not use it for Hype 's *setElementProperty* API properties
 
-**value** 	                     :  This value should be the real css property name ,hype-api property name or property name you wish to target. 
+**value** 	                     :  This value should be the real css property name ,hype Hype 's *setElementProperty* API property names or other HTML property name you wish to target. 
 
 
 
@@ -234,9 +241,9 @@ Code:
 
 The code is placed in the Hype Documents Head file.
 
-Either placing the **symbolOverride.js** in the Hype resources panel, which will link it to the head or 
+Either place the **symbolOverride.js** file in the Hype resources panel, which will link it to the head or 
 
-Copying and pasting the below code into the Head file within Hype.
+Copyi and past the below code into the Head file within Hype.
 
 
 
