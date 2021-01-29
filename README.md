@@ -27,11 +27,15 @@ With the Extension and on Symbol load.
 
 
 
+<img src="README.assets/rocket2.gif" alt="rocket2" style="zoom:150%;" />
+
+
+
 <img src="README.assets/Screenshot 2021-01-28 at 23.41.11.jpg" alt="Screenshot 2021-01-28 at 23.41.11" style="zoom:50%;" />
 
 
 
- ![rocket2](README.assets/rocket2.gif)
+ 
 
 <hr>
 
@@ -228,7 +232,13 @@ You can also change  **print_debug**  to **false**  to turn it off
 
 Code:
 
-The code is place in the Hype Documents Head file.
+The code is placed in the Hype Documents Head file.
+
+Either placing the **symbolOverride.js** in the Hype resources panel, which will link it to the head or 
+
+Copying and pasting the below code into the Head file within Hype.
+
+
 
 ```javascript
 	
