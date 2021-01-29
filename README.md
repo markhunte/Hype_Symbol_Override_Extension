@@ -33,7 +33,7 @@ With the Extension and on Symbol load.
 
 
 
-<img src="README.assets/Screenshot 2021-01-28 at 23.41.11.jpg" alt="Screenshot 2021-01-28 at 23.41.11" style="zoom:50%;" />
+<img src="README.assets/Screenshot 2021-01-29 at 21.24.58.jpg" alt="Screenshot 2021-01-29 at 21.24.58" style="zoom:50%;" />
 
 
 
