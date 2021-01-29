@@ -23,7 +23,7 @@ This extension gives you a way to easily override many of the Symbol instance's 
 
 <img src="README.assets/Screenshot 2021-01-28 at 23.41.27.jpg" alt="Screenshot 2021-01-28 at 23.41.27" style="zoom:50%;" />
 
-
+<hr>
 
 With the Extension and on Symbol load.
 
@@ -32,6 +32,8 @@ With the Extension and on Symbol load.
 ![rocket2](README.assets/rocket2.gif)
 
 
+
+<hr>
 
 <img src="README.assets/Screenshot 2021-01-29 at 21.24.58.jpg" alt="Screenshot 2021-01-29 at 21.24.58" style="zoom:50%;" />
 
