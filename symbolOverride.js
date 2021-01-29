@@ -1,245 +1,9 @@
-# Hype Symbol Override Extension
- Symbol Instance Properties
 
-This Extension will run on Symbol Load.
-
-
-
-Although Hype Symbol instances share all the same HTML properties, childrencelements , timelines etc.
-
-It is often the case that you want each instance to use different parameters  when they appear on scene.
-
- 
-
-<hr>
-
-This extension gives you a way to easily override many of the Symbol instance's properties.
-
-
-
-*Four instances of a single Symbol.*
-
-<img src="README.assets/Screenshot 2021-01-28 at 23.41.27.jpg" alt="Screenshot 2021-01-28 at 23.41.27" style="zoom:50%;" />
-
-
-
-With the Extension and on Symbol load.
-
-
-
-<img src="README.assets/Screenshot 2021-01-28 at 23.41.11.jpg" alt="Screenshot 2021-01-28 at 23.41.11" style="zoom:50%;" />
-
-
-
- ![rocket2](README.assets/rocket2.gif)
-
-<hr>
-
-
-
- Individual Symbol instance properies can be overriden to allow each instance of the symbol to  be displayed differently and behave differently from each other at load time.
-
-Each Symbol Instance can be assign dataset key names  (*data-elementRef_*) and values. 
-
-Any Symbol Instance's children that have the matching dataset key name will use the value to overide it's properties
-
-Each dataset key name must only be used per child element. Any child element must have its own unique dataset key name.
-
-The overriden properties can be noramal css properties, hypeDocument.setElementProperty() properties or other proberties that can normally be set with javascript.
-
-A Symbol Instance is an instance of a single Symbol on a scene . There can be many instances of the same Symbol on a scene.
-
-You only have to set up the Symbol and its childrens elements once.
-You can add a new dataset key name and value at any time.
-
- A Symbol's child elements  may have a  dataset key names (*data-elementRef_*) and values  but the Symbol itself does not have to have, use any or all of them.
-Element dataset key names (*data-elementRef_*)   that are used, must match in the Parent Symbol
-
-
-
-<hr>
-
-The datasets and value are entered  in Additional HTML Attributes in Hype's Identity Panel
-
-<img src="README.assets/Screenshot 2021-01-28 at 22.38.34.jpg" alt="Screenshot 2021-01-28 at 22.38.34" style="zoom:50%;" />
-
-
-
-
-
-#### Symbol data attribute:
-
-Symbol's Dataset name and value to use for an override from the parent Symbol Instance
-
-**constructions**
-
-<hr>
-*data-elementRef_propertyTag | value*
-
-*data-elementRef_propertyTag | value,duration*
-
-<hr>
-
-###### ***data-elementRef_propertyTag***
-
-
-
-**data-**    : All names must start with this.
-
-**elementRef_** : The arbitry name you give to refence an element. this does not have to match any real id you have given the element.   Must end with <u>***underscore***</u>
-
-**propertyTag**   :The name of the property. 
-
-This Should reflect in some part the real world property name so its intent is clear.
-
-
-
-**value**  			:  The property value to pass in for the override.
-
-**duration** 		:   The duration value for a hype API setElementProperty. 
-
-This comes after the value and is separated by a comma. 			
-
-<hr>  	
-
-####  Symbol data attribute examples:
-
-
-
-| data-elementRef_propertyTag | Value                                                        |
-| :-------------------------- | :----------------------------------------------------------- |
-| data-rect_url               | ${resourcesFolderName}/foo.png                               |
-| data-text_bgcolor           | pink                                                         |
-| data-rect1_width            | 400                                                          |
-| data-rect1_height           | 400                                                          |
-| data-rect1_url              | ${resourcesFolderName}/foo2.png                              |
-| data-rect1_backgroundsize   | contain                                                      |
-| data-rect1_backgroundrepeat | no-repea                                                     |
-| data-rect_rotatez           | 20                                                           |
-| data-text2_innertext        | foo other string  or words                                   |
-| data-rect1_scalex           | 2,8                                                          |
-| data-rect1_scaley           | 2,8                                                          |
-| data-text_color             | rgb(233, 205, 85)                                            |
-| data-text_innerhtml         | `<span style="color:gold;font-weight:bold">Skateboarding</span>` |
-| data-text2_innerhtml        | Hello my lovely world                                        |
-| data-square_zindex          | -20                                                          |
-| data-text_innertext         | foo some string or words                                     |
-
-
-
-<hr>
-
-
-
-
-
-####  Element data attribute:
-
-Element's Dataset name and value to use to ACCEPT an override from the parent Symbol Instance
-
-
-
-<img src="README.assets/Screenshot 2021-01-28 at 22.48.54.jpg" alt="Screenshot 2021-01-28 at 22.48.54" style="zoom:50%;" />
-
-<hr>
-
-**data-elementRef_propertyTag**   : This must match a Parent Symbol's override name.  
-
-
-
-**style** 						 :  Use the 'style' property name at the beginning if the target property is a native css property.
-
-**value** 	                     :  This value should be the real css property name ,hype-api property name or property name you wish to target. 
-
-
-
-**Constructions**   
-
-<hr>
-
-*data-elementRef_propertyTag | value*
-
-*data-elementRef_propertyTag | style.value*    
-
-<hr>
-
-####  Element data attribute examples:
-
-
-
-| data-elementRef_propertyTag | Value                   |
-| :-------------------------- | :---------------------- |
-| data-rect_url               | background-image        |
-| data-text_bgcolor           | style.backgroundColor   |
-| data-rect1_width            | width                   |
-| data-rect1_height           | height                  |
-| data-rect1_url              | background-image        |
-| data-rect1_backgroundsize   | style.background-size   |
-| data-rect1_backgroundrepeat | style.background-repeat |
-| data-rect_rotatez           | rotateZ                 |
-| data-text2_innertext        | innerText               |
-| data-rect1_scalex           | scaleX                  |
-| data-rect1_scaley           | scaleY                  |
-| data-text_color             | style.color             |
-| data-text_innerhtml         | innerHTML               |
-| data-text2_innerhtml        | innerHTML               |
-| data-square_zindex          | z-index                 |
-| data-text_innertext         | innerText               |
-
-
-
-
-
-<hr>
-
-
-
-**Error handling.**
-
-An error will occur if there is a mismatch in the dataset key names (*data-elementRef_*)  being used.
-
-An error will be thrown in the console giving details and info to help find the mismatch.
- 	Data for each error overide in a Symbol instance will be shown.
- 	**Symbol ID**
- 	**Mismatched key name**
- 	**Completed override data accepted** by the children [object]
- 	**Expected overrides sent from the Symbol** to the children. [object]
-
-
-
-**print_debug** 
-
-If **print_debug**  is on ( set to **true** ) The console will give the following data.
-
-This is handy if you are not getting the values where you expect.
-
-  Data for each fully Completed overide for a Symbol instance will be shown.
- 	**Symbol ID**
- 	**Completed override data accepted** by the children [object]
- 	**Expected overrides sent from the Symbol** to the children. [object]
-
-You can also change  **print_debug**  to **false**  to turn it off
-
-
-
-<hr>
-
-
-
-Code:
-
-The code is place in the Hype Documents Head file.
-
-```javascript
-	
-		
-		
-<script>
-
-  function symbolOverride_extension(hypeDocument, element, event) {
+​		 function symbolOverride_extension(hypeDocument, element, event) {
   /**  
-					++++++ SYMBOL OVERRIDE EXTENSION    ++++++ 
-					
+​					++++++ SYMBOL OVERRIDE EXTENSION    ++++++ 
+​					
+
 					By Mark Hunte 2021
 					Versions: 1.0.0
 					MIT License
@@ -269,10 +33,10 @@ This Extension will run on Symbol Load.
  Although Hype Symbol instances share all the same HTML properties, childrencelements , timelines etc.
 
 It is often the case that you want each instance to use different parameters  when they appear on scene
- 
+
 Individual Symbol instance properies can be overriden to allow each instance of the symbol to  be displayed differently and behave differently from each other at load time.
 
-Each Symbol Instance can be assign dataset key names  (*data-elementRef_*) and values. 
+Each Symbol Instance can be assign dataset key names  (data-elementRef_) and values. 
 
 Any Symbol Instance's children that have the matching dataset key name will use the value to overide it's properties
 
@@ -284,10 +48,10 @@ A Symbol Instance is an instance of a single Symbol on a scene . There can be ma
 You only have to set up the Symbol and its childrens elements once.
 You can add a new dataset key name and value at any time.
 
- A Symbol's child elements  may have a  dataset key names (*data-elementRef_*) and values  but the Symbol itself does not have to have, use any or all of them.
-Element dataset key names (*data-elementRef_*)   that are used, must match in the Parent Symbol
+ A Symbol's child elements  may have a  dataset key names (data-elementRef_) and values  but the Symbol itself does not have to have, use any or all of them.
+Element dataset key names (data-elementRef_)   that are used, must match in the Parent Symbol
 
- 
+
  •You then can change any of an instance on scene's value.
  •You can add a new dataset key name and value at any time.
  •You do not have to use all the dataset key names and value in a given Symbol instance.
@@ -305,14 +69,15 @@ Symbol data attribute:
 										This Should refect in some part the real world property name so its intent is clear.
   @param  value						: The property value to pass in for the override. 
   @param duration 	                : The duration value for a hype API setElementProperty. This comes after the value and separated by a comma. 						
-  
+
   	 @construction   data-elementRef_propertyTag | value
   	 @construction   data-elementRef_propertyTag | value,duration
-  	
+
+
   	
   	
   	  *Examples.
-  	     
+
 data-text_innertext			|    foo some string or words    
 data-rect_url       		|   ${resourcesFolderName}/foo.png   
 data-text_bgcolor			|   pink      
@@ -326,12 +91,12 @@ data-text2_innertext		|	foo other string  or words
 data-rect1_scalex			|   2,8  
 data-rect1_scaley			|   2,8    
 data-text_color				|   rgb(233, 205, 85)  
-data-text_innerhtml			|   <span style="color:white;font-weight:bold">Girl</span> <span style="color:gold;font-weight:bold">Skateboarding</span> 
+data-text_innerhtml			|   Girl Skateboarding 
 data-text2_innerhtml		|   Hello my lovely world    
 data-square_zindex			| 	-20
   	  
- 
- 
+
+
  ==========================================
 
 /**  Elemnet data attribute:
@@ -343,14 +108,15 @@ data-square_zindex			| 	-20
   	
     @construction   data-elementRef_propertyTag | value
     @construction   data-elementRef_propertyTag | style.value
- 
+
   
-  
+
+
   *Examples.
-  
-  
+
+
     	  *Examples.
-  	    	 
+
 data-text_innertext			|   innerText    
 data-rect_url       		|   background-image   
 data-text_bgcolor			|   style.backgroundColor      
@@ -377,27 +143,28 @@ data-square_zindex			| 	z-index
  	Mismatched key name
  	Completed override data accepted by the children [object]
  	Expected overrides sent from the Symbol to the children. [object]
- 
+
  •You can also change  print_debug  to true to give debug data in the console. This is handy if you are not getting the values where you expect.
  •Data for each fully Completed overide for a Symbol instance will be shown.
  	Symbol ID
  	Completed override data accepted by the children [object]
  	Expected overrides sent from the Symbol to the children. [object]
- 
+
 
 
 */
 
-     	  
+
  	  //----- turn DEBUGGER true = ON or false = OFF ----
  	  
-             print_debug = true
+ 	         print_debug = true
+
  
+
  
- 
- 
+
  //======================================  DO NOT EDIT BELOW ======================================\
- 
+
  //-- THIS SYMBOL
  	var thisSymbol = hypeDocument.getSymbolInstanceById(element.id)
   	var theDataSet = element.dataset
@@ -405,48 +172,53 @@ data-square_zindex			| 	z-index
     
   //+++++++++ For debug function  ++++++>
     addIDtoChildFordebugger()
-  
+
   //--- ITERATE OVER SYMBOL DATASET
-  
+
  for( var key in theDataSet){
-  
- 
+
+
   //+++++++++ For debug function  ++++++>
      setDefaultsOnPropertyTypes()
  //+++++++++<
-  
-  
+
+
   //++++++ MAIN CODE FOR DATA SETS
 	try {
      
      
     var thisElement = element.querySelector('[data-' + key + ']') 
-        
-        
-    
+
+
+​        
+​    
     if (typeof thisElement != "undefined"){
-   
-        var property_string = thisElement.dataset[key]
-	 
-     
-      var property_value_type = property_string.split('.')[0]
-  
        
+        var property_string = thisElement.dataset[key]
+
+
+​     
+      var property_value_type = property_string.split('.')[0]
+
+
+​       
      var css_style_property = property_string.split('.')[1]
      
      switch( property_value_type) {
      
      //+++ CSS STYLE  TYPE ATTRIBUTES
-		  	case 'style'  :
-     
-      	
+    	  	case 'style'  :
+
+
+​      	
         			thisElement.style[css_style_property] = theDataSet[key] 
     				
-					css_style = true
-					 
+    				css_style = true
+
    
+
 		  break;
-             //+++ HYPE API TYPE ATTRIBUTES
+	         //+++ HYPE API TYPE ATTRIBUTES
 	  		case 'top':
 	   		case 'left':
 		 	case 'width':
@@ -464,114 +236,122 @@ data-square_zindex			| 	z-index
 			var value  = splitValues[0]
 			var duration  = splitValues[1]
 			var timingFunctionNameOrMathEquationFunction  = splitValues[2]
-			
-		   		 
+
+
+​		   		 
      				hypeDocument.setElementProperty( thisElement, propName, value,duration,timingFunctionNameOrMathEquationFunction)
      				
-					 hype_api = true
+    				 hype_api = true
                       
        break;
-   
-		  	default:
+       
+    	  	default:
              //+++ GENERAL TYPE ATTRIBUTES
-			    	thisElement[property_string]  = theDataSet[key]
-				
-     
+    		    	thisElement[property_string]  = theDataSet[key]
+
+
+​     
 }
 
 
 
 
  //+++++++++ DEBUG DATA ++++++
- 
- loadDebugDataTransfer(thisElement,key,theDataSet,property_value_type,css_style_property,splitValues,hype_api,propName,value,duration,timingFunctionNameOrMathEquationFunction)
- 
 
- 
+ loadDebugDataTransfer(thisElement,key,theDataSet,property_value_type,css_style_property,splitValues,hype_api,propName,value,duration,timingFunctionNameOrMathEquationFunction)
+
+
+
 //--reset
         reset ()
       
           }
- 
-	}
      
-	catch(err) {
+    }
+     
+    catch(err) {
         
     print_debug = false
-	thrown(err  )
- 
+    thrown(err  )
+
 
 	}
-     
-    
-	
+
+
+​    
+​	
 }//--end for
 
 
-    
-  
-    
+​    
+
+
  //================================================================ Debug -- logging below ====
   if ( print_debug  ){
 
        debug()
         
        }
-   
-     
+
+
+​     
   //--DEBUG PRINT OUT SETUP
-  
+
   function debugBuild(elementID,theDataSet){
-   
- 	 
+
+
      overrides_completed.push("Symbol id  : " +   elementID )
       
       overrides_expected.push( theDataSet)
-   
+
   
+
   }
-  
-    
+
+
     //++++ DEBUG LOGS
  function debug(){
     
     // var thisChild = hypeDocument.getElementById( overrides_completed[1]['Element id'])
-      
-     
+
+
+​     
     /// var iterator = thes.values();
- 
+     
             // if  ("childSymbEl_" in thisChild.dataset)  {
                 // var value = thisChild.dataset.childSymbEl_
                  console.log('DEBUG: Symbol overriden : ' + element.id ,{'overrides_expected':  overrides_expected, 'overrides_completed': overrides_completed},'Appears complete')
-               
-           
+
+
+​           
             // }
-             
-          
+
+
+​          
     // }
-    
+
  reset ()
  }
- 
-    
+
+
     //+++ ERROR LOGS
  function thrown(err ){
- 
+
  console.log( err.name  + ' - Symbol override Extension May have a mismatch in ' , 'Symbol - ' + element.id,{'Mismatched: dataset key ':key, overrides_expected,'overrides_completed': overrides_completed}  )
       
      
  reset ()
      
  }
- 
- 
+
  
 
 
-    
-    
+
+
+​    
     function addIDtoChildFordebugger(){
- 		//--Add a dataset key/value to the symbol child element
+    	//--Add a dataset key/value to the symbol child element
         //-- We will use this late for thrown errors and debug to get symbol instance id
                    
                   var symbChildren =        element.querySelectorAll('.HYPE_element')
@@ -580,31 +360,34 @@ data-square_zindex			| 	z-index
      
                    symbChildren[i].dataset.childSymbEl_ = 'childSymbEl_' +  element.id
                 }
-         
-                   
+
+
+​                   
                 overrides_completed =[]
                 overrides_expected =[]
                 debugBuild(element.id,theDataSet)
-        
-      
-      
+
+
+​      
+​      
     }
-    
-    
+
+
+​    
  function  setDefaultsOnPropertyTypes(){
-        hype_api = false
-        css_style = false
-    }
-    
-    
+​        hype_api = false
+​        css_style = false
+​    }
+​    
+​    
    function loadDebugDataTransfer(thisElement,key,theDataSet,property_value_type,css_style_property,splitValues,hype_api,propName,value,duration,timingFunctionNameOrMathEquationFunction){
-        
-  
+​        
+
    overrides_completed.push({
     
        "Element id": thisElement.id,
       "Element Key":key,
-     
+
 
       "Element target value":theDataSet[key],
       "css_style" :css_style,
@@ -619,9 +402,9 @@ data-square_zindex			| 	z-index
        
       })
     }
-
+    
     function reset(){
-
+    
             key =""
               property_value_type = undefined
             css_style_property = undefined
@@ -636,19 +419,19 @@ data-square_zindex			| 	z-index
 
 
     }
- 	 
 
 
-  
+
+
      return true;
   }
 
   if("HYPE_eventListeners" in window === false) {
     window.HYPE_eventListeners = Array();
   }
-  window.HYPE_eventListeners.push({"type":"HypeSymbolLoad", "callback":symbolOverride_extension});
-
- </script>
+  window.HYPE_eventListeners.push({"type":"HypeSymbolLoad", "callback":symbolOverride_extension}); 
 	
-```
 
+
+​	
+​	
