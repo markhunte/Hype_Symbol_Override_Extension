@@ -215,10 +215,10 @@ An error will occur if there is a mismatch in the dataset key names (*data-eleme
 
 An error will be thrown in the console giving details and info to help find the mismatch.
  	Data for each error overide in a Symbol instance will be shown.
- 	**Symbol ID**
- 	**Mismatched key name**
- 	**Completed override data accepted** by the children elements
- 	**Expected overrides sent from** the Symbol to the children elements
+ 	**Symbol ID**<br>
+ 	**Mismatched key name**<br>
+ 	**Completed override data accepted** by the children elements<br>
+ 	**Expected overrides sent from** the Symbol to the children elements<br>
 
  <img src="README.assets/Screenshot 2021-01-29 at 01.15.52-1883496.jpg" alt="Screenshot 2021-01-29 at 01.15.52" style="zoom:50%;" />
 
@@ -233,9 +233,9 @@ If **print_debug**  is on ( set to **true** ) The console will give the followin
 This is handy if you are not getting the values where you expect.
 
   Data for each fully Completed overide for a Symbol instance will be shown.
- 	**Symbol ID**
- 	**Completed override data accepted** by the children elements
- 	**Expected overrides sent from** the Symbol to the children elements
+ 	**Symbol ID**<br>
+ 	**Completed override data accepted** by the children elements<br>
+ 	**Expected overrides sent from** the Symbol to the children elements<br>
 
 You can also change  **print_debug**  to **false**  to turn it off
 
