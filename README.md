@@ -1,7 +1,7 @@
 # Hype Symbol Override Extension
  Override Symbol Instance Properties
 
-<img src="README.assets/Screenshot 2021-01-29 at 20.44.48-1953337.jpg" alt="Screenshot 2021-01-29 at 20.44.48" style="zoom:50%;" />
+ <img src="README.assets/Screenshot 2021-01-29 at 20.55.38.jpeg" alt="Screenshot 2021-01-29 at 20.55.38" style="zoom:50%;" />
 
 This Extension will run on Symbol Load.
 
@@ -29,7 +29,7 @@ With the Extension and on Symbol load.
 
 
 
-<img src="README.assets/rocket3.gif" alt="rocket" style="zoom:150%;" />
+![rocket2](README.assets/rocket2.gif)
 
 
 
