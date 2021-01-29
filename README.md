@@ -1,5 +1,7 @@
 # Hype Symbol Override Extension
- Symbol Instance Properties
+ Override Symbol Instance Properties
+
+![Screenshot 2021-01-29 at 20.44.48](README.assets/Screenshot 2021-01-29 at 20.44.48.jpg)
 
 This Extension will run on Symbol Load.
 
