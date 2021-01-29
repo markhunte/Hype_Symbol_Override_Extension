@@ -1,7 +1,7 @@
 # Hype Symbol Override Extension
  Override Symbol Instance Properties
 
-![Screenshot 2021-01-29 at 20.44.48](README.assets/Screenshot 2021-01-29 at 20.44.48.jpg)
+<img src="README.assets/Screenshot 2021-01-29 at 20.44.48-1953337.jpg" alt="Screenshot 2021-01-29 at 20.44.48" style="zoom:50%;" />
 
 This Extension will run on Symbol Load.
 
