@@ -27,7 +27,7 @@ With the Extension and on Symbol load.
 
 
 
-<img src="README.assets/rocket2.gif" alt="rocket2" style="zoom:150%;" />
+<img src="README.assets/rocket3.gif" alt="rocket" style="zoom:150%;" />
 
 
 
