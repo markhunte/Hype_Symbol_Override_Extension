@@ -218,7 +218,7 @@ An error will be thrown in the console giving details and info to help find the 
 
 
 
- <img src="README.assets/Screenshot 2021-01-29 at 01.14.18-1883315.jpg" alt="Screenshot 2021-01-29 at 01.14.18" style="zoom:50%;" />
+![Screenshot 2021-01-29 at 01.15.52](README.assets/Screenshot 2021-01-29 at 01.15.52-1883417.jpg) 
 
 
 
@@ -237,9 +237,7 @@ You can also change  **print_debug**  to **false**  to turn it off
 
 
 
-
-
-![Screenshot 2021-01-29 at 01.14.18](README.assets/Screenshot 2021-01-29 at 01.14.18.jpg)
+<img src="README.assets/Screenshot 2021-01-29 at 01.14.18-1883315.jpg" alt="Screenshot 2021-01-29 at 01.14.18" style="zoom:50%;" />
 
 
 
