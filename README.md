@@ -5,11 +5,11 @@ This Extension will run on Symbol Load.
 
 
 
-Although Hype Symbol instances share all the same HTML properties, childrencelements , timelines etc.
+Although Hype Symbol instances share all the same HTML properties, child elements , timelines etc.
 
-It is often the case that you want each instance to use different parameters  when they appear on scene.
+It is often the case that you want each Symbol's instance to use different parameters when they appear on scene.
 
- 
+For example you may be using a Symbol to display different items in a cart or shop front. 
 
 <hr>
 
@@ -218,6 +218,12 @@ An error will be thrown in the console giving details and info to help find the 
 
 
 
+
+
+![Screenshot 2021-01-29 at 01.15.52](README.assets/Screenshot 2021-01-29 at 01.15.52.jpg)
+
+
+
 **print_debug** 
 
 If **print_debug**  is on ( set to **true** ) The console will give the following data.
@@ -230,6 +236,10 @@ This is handy if you are not getting the values where you expect.
  	**Expected overrides sent from the Symbol** to the children. [object]
 
 You can also change  **print_debug**  to **false**  to turn it off
+
+
+
+![Screenshot 2021-01-29 at 01.14.18](README.assets/Screenshot 2021-01-29 at 01.14.18.jpg)
 
 
 
