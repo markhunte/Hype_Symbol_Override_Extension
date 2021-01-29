@@ -216,9 +216,9 @@ An error will be thrown in the console giving details and info to help find the 
  	**Completed override data accepted** by the children [object]
  	**Expected overrides sent from the Symbol** to the children. [object]
 
+ <img src="README.assets/Screenshot 2021-01-29 at 01.15.52-1883496.jpg" alt="Screenshot 2021-01-29 at 01.15.52" style="zoom:50%;" />
 
 
-![Screenshot 2021-01-29 at 01.15.52](README.assets/Screenshot 2021-01-29 at 01.15.52-1883417.jpg) 
 
 
 
