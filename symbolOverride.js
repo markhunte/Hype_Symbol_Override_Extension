@@ -76,22 +76,24 @@ Symbol data attribute:
   
     *Examples.
        
-data-text_innertext            |    foo some string or words
-data-rect_url               |   ${resourcesFolderName}/foo.png
-data-text_bgcolor            |   pink
-data-rect1_width            |   400
-data-rect1_height            |   400
-data-rect1_url                |   ${resourcesFolderName}/foo2.png
-data-rect1_backgroundsize    |   contain
-data-rect1_backgroundrepeat    |   no-repeat
-data-rect_rotatez            |    20
-data-text2_innertext        |    foo other string  or words
-data-rect1_scalex            |   2,8
-data-rect1_scaley            |   2,8
-data-text_color                |   rgb(233, 205, 85)
-data-text_innerhtml            |   <span style="color:white;font-weight:bold">Girl</span> <span style="color:gold;font-weight:bold">Skateboarding</span>
-data-text2_innerhtml        |   Hello my lovely world
-data-square_zindex            |     -20
+| data-elementRef_propertyTag | Value                                                        |
+| :-------------------------- | :----------------------------------------------------------- |
+| data-rect_url               | ${resourcesFolderName}/foo.png                               |
+| data-text_bgcolor           | pink                                                         |
+| data-rect1_width            | 400                                                          |
+| data-rect1_height           | 400                                                          |
+| data-rect1_url              | ${resourcesFolderName}/foo2.png                              |
+| data-rect1_backgroundsize   | contain                                                      |
+| data-rect1_backgroundrepeat | no-repea                                                     |
+| data-rect_rotatez           | 20                                                           |
+| data-text2_innertext        | foo other string  or words                                   |
+| data-rect1_scalex           | 2,8                                                          |
+| data-rect1_scaley           | 2,8                                                          |
+| data-text_color             | rgb(233, 205, 85)                                            |
+| data-text_innerhtml         | `<span style="color:gold;font-weight:bold">Skateboarding</span>` |
+| data-text2_innerhtml        | Hello my lovely world                                        |
+| data-square_zindex          | -20                                                          |
+| data-text_innertext         | foo some string or words                                     |
     
 
 
@@ -114,22 +116,25 @@ data-square_zindex            |     -20
 
       *Examples.
            
-data-text_innertext            |   innerText
-data-rect_url               |   background-image
-data-text_bgcolor            |   style.backgroundColor
-data-rect1_width            |   width
-data-rect1_height            |   height
-data-rect1_url                |   background-image
-data-rect1_backgroundsize    |   style.background-size
-data-rect1_backgroundrepeat    |   style.background-repeat
-data-rect_rotatez            |    rotateZ
-data-text2_innertext        |    innerText
-data-rect1_scalex            |   scaleX
-data-rect1_scaley            |   scaleY
-data-text_color                |   style.color
-data-text_innerhtml            |   innerHTML
-data-text2_innerhtml        |   innerHTML
-data-square_zindex            |     z-index
+
+| data-elementRef_propertyTag | Value                   |
+| :-------------------------- | :---------------------- |
+| data-rect_url               | background-image        |
+| data-text_bgcolor           | style.backgroundColor   |
+| data-rect1_width            | width                   |
+| data-rect1_height           | height                  |
+| data-rect1_url              | background-image        |
+| data-rect1_backgroundsize   | style.background-size   |
+| data-rect1_backgroundrepeat | style.background-repeat |
+| data-rect_rotatez           | rotateZ                 |
+| data-text2_innertext        | innerText               |
+| data-rect1_scalex           | scaleX                  |
+| data-rect1_scaley           | scaleY                  |
+| data-text_color             | style.color             |
+| data-text_innerhtml         | innerHTML               |
+| data-text2_innerhtml        | innerHTML               |
+| data-square_zindex          | z-index                 |
+| data-text_innertext         | innerText               |
 
 
 
