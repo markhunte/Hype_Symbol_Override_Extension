@@ -164,7 +164,7 @@ An element's **data-elementRef_propertyTag**   Must match a Parent Symbol's  *da
 
 **style** 						 :  Add 'style' property name at the beginning using (.) syntax, if the target property is a native css property. Do not use it for Hype 's *setElementProperty* API properties. 
 
-**value** 	                     :  This value should be the real a Hype 's *setElementProperty* API property names ,a css property name or other HTML property name you wish to target. 
+**value** 	                     :  This value should be the real Hype 's *setElementProperty* API property names , a real css property name or other real HTML property name you wish to target. 
 
 
 
