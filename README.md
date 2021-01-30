@@ -11,7 +11,7 @@ Although Hype Symbol instances share all the same HTML properties, child element
 
 It is often the case that you want each Symbol's instance to use different parameters when they appear on scene.
 
-For example you may be using a Symbol to display different items in a cart or shop front. 
+For example you may be using a Symbol to display images and text but want different images and text in each.. 
 
 <hr>
 
