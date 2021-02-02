@@ -76,7 +76,7 @@ An Element's data-bindingName  is to be used, must the matching data-bindingName
 
 <hr>
 
-#### **Symbol instance element: **data-bindingName: `value`
+####  Symbol instance element:  data-bindingName: `value`
 
 
 
