@@ -1,6 +1,6 @@
 
 function symbolOverride_extension(hypeDocument, element, event) {
-/**
+/*
                 ++++++ SYMBOL OVERRIDE EXTENSION    ++++++
                 
                 By Mark Hunte 2021
@@ -27,54 +27,89 @@ function symbolOverride_extension(hypeDocument, element, event) {
                 SOFTWARE.
                 ===============================================================================
 
-This Extension will run on Symbol Load.
+ This Extension will run on Symbol Load (HypeSymbolLoad).
 
-Although Hype Symbol instances share all the same HTML properties, childrencelements , timelines etc.
+ Although Hype Symbol instances share all the same HTML properties, child elements , timelines etc.
 
-It is often the case that you want each instance to use different parameters  when they appear on scene
+ It is often the case that you want each Symbol's instance to use different parameters when they appear on scene.
 
-Individual Symbol instance properies can be overriden to allow each instance of the symbol to  be displayed differently and behave differently from each other at load time.
+ For example you may be using a Symbol to display images and text but want different images and text in each..
 
-Each Symbol Instance can be assign dataset key names  (*data-elementRef_*) and values.
-
-Any Symbol Instance's children that have the matching dataset key name will use the value to overide it's properties
-
-Each dataset key name must only be used per child element. Any child element must have its own unique dataset key name.
-The overriden properties can be noramal css properties, hypeDocument.setElementProperty() properties or other proberties that can normally be set with javascript.
-
-A Symbol Instance is an instance of a single Symbol on a scene . There can be many instances of the same Symbol on a scene.
-
-You only have to set up the Symbol and its childrens elements once.
-You can add a new dataset key name and value at any time.
-
-A Symbol's child elements  may have a  dataset key names (*data-elementRef_*) and values  but the Symbol itself does not have to have, use any or all of them.
-Element dataset key names (*data-elementRef_*)   that are used, must match in the Parent Symbol
+ Individual Symbol instance properties can be overriden to allow each instance of the symbol to  be displayed differently and behave differently from each other at load time.
 
 
-•You then can change any of an instance on scene's value.
-•You can add a new dataset key name and value at any time.
-•You do not have to use all the dataset key names and value in a given Symbol instance.
-•dataset key names Must match from Parent Symbol to the targeted child.
+
+ Each Symbol's Child element can be assigned dataset key names  [data-bindingName] and [Property] names.
+
+ When a Parent  Symbol 'Instance' element  has a matching 'data-bindingName' and is given a 'value' the child element will use the 'value' to overide it's targeted
+ property
+
+ Each 'data-bindingName'  must only be used per child element.
+
+ The Child element must use its own unique 'data-bindingNames'.
+For example, You may want to change the 'Left' and 'Top' of 'Rectangle 1' and 'Rectangle 2'.
+You could use the 'data-bindingName's.
+
+ 'data-rect1left' and   'data-rect1top'
+&
+'data-rect2left' and 'data-rect2top'
 
 
-Symbol data attribute:
 
-@desc dataset name and value to use for an override from the parent Symbol Instance
-@param   data-                    : Must start with 'data-'
-@param   elementRef_                : Must end with a _ underscore.
-                                The arbitry name you give to refence an element. this does not have to match any real id you have given the element.
-                                
-@param   @param  propertyTag        : Must start with '_'  ( underscore). The name of the property.
-                                    This Should refect in some part the real world property name so its intent is clear.
-@param  value                        : The property value to pass in for the override.
-@param duration                     : The duration value for a hype API setElementProperty. This comes after the value and separated by a comma.
+ The names are entirely up to you but must start with 'data-' and should reflect the target element and property name for easy understanding of intent and when looking back at it at a later time.
 
-   @construction   data-elementRef_propertyTag | value
-   @construction   data-elementRef_propertyTag | value,duration
+
+============
+  Tip:
+ For readability : You may want to add an Underscore between the element ref and property ref in a data-bindingName.
+ 
+ For example. instead of 'data-react1bgimage' use 'data-react1_bgimage Or you can use camel Hump  syntax. 'data-react1InnerText'
+ But note at run time the Capped letters are changed to lowercase. This is not an issue for this extension but may if you ever wanted to access the datasets from outside of it's scope should be noted.'
+============
+
+ The overriden properties can be normal 'css' properties, 'hypeDocument.setElementProperty'() properties or 'other HTML' properties that can normally be set with javascript.
+
+ A Symbol Instance is an instance of a single Symbol on a scene and there can be many instances of the same Symbol on a scene.
+
+ You only have to set up a Symbol Instance and the Symbol child elements once but you can add a new data-bindingName and value at any time.
+
+  A Symbol's child elements may have data-bindingNames and property names  but the Symbol Instance parent itself does not have to ;  have , use any or all of them.
+ If a Child Element's data-bindingName is to be used then there must be a matching data-bindingName in the Parent Symbol Instance for this to happen.
+
+
+ ####  A Symbol instance element:  data-bindingName: `value`
+
+ *How Symbol Instance **data-bindingNames** and **values** are set to override Symbol Instance **child elements.***
+The data-bindingNames  and values are entered  in the 'Additional HTML Attributes' in Hype's Identity
+ 
+ ##constructions explained
+
+data-bindingName | value
+data-bindingName | value,duration
+
+
+ ###### The data-bindingName
+
+ data-     : All names must start with this.
+
+ bindingName : The arbitry name you give to refence an element. this does not have to match any real id you have given to the element.  But should reflect in some part the symbols target child element and real world property name so its intent is clear.
+
+ ###### The Value
+
+ value              :  The property value to pass in for the override.
+
+ duration         :   The duration value for a hype API setElementProperty.
+
+ This comes after the value and is separated by a comma.
+
+ The duration value is here for completeness in reflection of the setElementProperty API usage.
+
+ In most cases you will do any animaions on elements using the normal means within hype.
+
+ But adding a duration here will also allow for the same type of animation afforded to using the setElementProperty in an Hype function.
   
   
-  
-    *Examples.
+ ####Some Examples of Symbol instance element data-bindingNames and values
        
 | data-elementRef_propertyTag | Value                                                        |
 | :-------------------------- | :----------------------------------------------------------- |
@@ -98,23 +133,32 @@ Symbol data attribute:
 
 
 ==========================================
-
-/**  Elemnet data attribute:
-
-@desc dataset name and value to use to ACCEPT an override from the parent Symbol Instance
-@param  data-elementRef_propertyTag   : This must match a Parent Symbol's override name.
-@param  style                          : Use the 'style' property name at the beginning if the target property is a native css property.
-@param  value                          : This value should be the real css property name ,hype-api property name or property name you wish to target.
-  
-@construction   data-elementRef_propertyTag | value
-@construction   data-elementRef_propertyTag | style.value
+ 
 
 
+ #### The symbols  > Child Elements  : data-bindingName  : property
+How Child Element's **data-bindingNames** and **property** names are set to ACCEPT an override from it's parent Symbol Instance
+The data-bindingNames  and property names are entered  in the **Additional HTML Attributes** in Hype's Identity Panel as shown here
 
-*Examples.
+ 
+  ##Constructions explained
+
+data-bindingName | property
+
+data-bindingName | style.property
+ 
+ 
+##An element's  data-bindingName Property  names
+
+ ( The Parent Symbol **Instance**  would need to include the same *data-bindingName* as this child's *data-bindingName* if required for that instance's use )
+
+style.              :  Add 'style' property name at the beginning using (.) syntax, if the target property is a native css property. Do not use it for Hype 's                                      setElementProperty API properties.
+
+property             :  This value should be the real Hype ***setElementProperty*** API property names , a real **css** property name or **other real HTML**                                         property name you wish to target.
 
 
-      *Examples.
+
+      'Examples.
            
 
 | data-elementRef_propertyTag | Value                   |

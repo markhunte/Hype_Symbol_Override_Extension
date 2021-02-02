@@ -202,6 +202,14 @@ The data-bindingNames  and property names are entered  in the **Additional HTML 
 <img src="README.assets/Screenshot 2021-01-28 at 22.48.54.jpg" alt="Screenshot 2021-01-28 at 22.48.54" style="zoom:50%;" />
 
 <hr>
+**Constructions**  **explained** 
+
+*data-bindingName | property*
+
+*data-bindingName | style.property*    
+
+<hr>
+
 An element's **data-bindingName**  **Property** names 
 
 ( The Parent Symbol **Instance**  would need to include the same *data-bindingName* as this child's *data-bindingName* if required for that instance's use )
@@ -210,20 +218,9 @@ An element's **data-bindingName**  **Property** names
 
 **style**. 						 :  Add 'style' property name at the beginning using (.) syntax, if the target property is a native css property. ***Do not use it for Hype 's setElementProperty API properties***. 
 
-**property** 	                     :  This value should be the real a Hype 's *setElementProperty* API property names ,a css property name or other HTML property name you wish to target. 
+**property** 	                     :  This value should be the real Hype ***setElementProperty*** API property names , a real **css** property name or **other real HTML** property name you wish to target. 
 
 
-
-**value** 	                     :  This value should be the real Hype ***setElementProperty*** API property names , a real **css** property name or **other real HTML** property name you wish to target. 
-
-
-
-**Constructions**  **explained** 
-
-<hr>
-*data-bindingName | property*
-
-*data-bindingName | style.property*    
 
 <hr>
 
