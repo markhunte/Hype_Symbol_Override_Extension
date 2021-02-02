@@ -29,11 +29,7 @@ With the Extension and on Symbol load.
 
 
 
-![rocket2](README.assets/rocket2.gif)
 
-
-
-<hr>
 
 <img src="README.assets/Screenshot 2021-01-29 at 21.24.58.jpg" alt="Screenshot 2021-01-29 at 21.24.58" style="zoom:50%;" />
 
@@ -47,32 +43,50 @@ With the Extension and on Symbol load.
 
  Individual Symbol instance properies can be overriden to allow each instance of the symbol to  be displayed differently and behave differently from each other at load time.
 
-Each Symbol Instance can be assigned dataset key names  (*data-elementRef_*) and values. 
+Each Symbol Instance can be assigned dataset key names  (*data-bindingName*) and values. 
 
-Any Symbol Instance's children that have the matching dataset key name will use the value to overide it's properties
+Any Symbol Instance's children that have the matching *data-bindingName* will use the value to overide it's properties
 
-Each dataset key name must only be used per child element. Any child element must have its own unique dataset key name.
+Each *data-bindingName*  must only be used per child element. Any child element must have its own unique dataset key name.
+
+For example You want to chnage the Left and Top of *Rectangle 1*and Rectangle 2.
+
+You could use the *data-bindingName*s.
+
+**data-rect1left**,  ***data-rect1top***
+
+and
+
+**data-rect2left**, ***data-rect2top***
+
+
+
+The names are entirely up to you but should reflect the target element and property name for easy understanding when looking at it at a later time.
 
 The overriden properties can be normal css properties, hypeDocument.setElementProperty() properties or other HTML properties that can normally be set with javascript.
 
 A Symbol Instance is an instance of a single Symbol on a scene and there can be many instances of the same Symbol on a scene.
 
-You only have to set up the Symbol and its children elements once but you can add a new dataset key name and value at any time.
+You only have to set up the Symbol and its children elements once but you can add a new data-bindingName  and value at any time.
 
- A Symbol's child elements may have dataset key names (*data-elementRef_*) and values  but the Symbol Parent itself does not have to ;  have , use any or all of them.
-Element dataset key names (*data-elementRef_*)   that are used, must match in the Parent Symbol
+ A Symbol's child elements may have data-bindingNames and values  but the Symbol Parent itself does not have to ;  have , use any or all of them.
+An Element's data-bindingName  is to be used, must the matching data-bindingName  in the Parent Symbol
 
 
 
 <hr>
 
-The datasets and value are entered  in the **Additional HTML Attributes** in Hype's Identity Panel
+#### <u>**Symbol instance element: **data-bindingName: `value`</u>
 
 
 
-#### **Symbol data attributes:**
+*How Symbol **data-bindingNames** and **values** are used for an override from the parent Symbol Instance.*
 
-Symbol Dataset name and value to use for an override from the parent Symbol Instance.
+The data-bindingNames  and values are entered  in the **Additional HTML Attributes** in Hype's Identity Panel as shown here
+
+
+
+
 
 
 
@@ -89,39 +103,43 @@ Symbol Dataset name and value to use for an override from the parent Symbol Inst
 **constructions**
 
 <hr>
-*data-elementRef_propertyTag | value*
+*data-bindingNamepropertyTag | value*
 
-*data-elementRef_propertyTag | value,duration*
+*data-bindingNamepropertyTag | value,duration*
 
 <hr>
 
-###### ***data-elementRef_propertyTag***
+###### data-bindingName
 
 
 
 **data-**    : All names must start with this.
 
-**elementRef_** : The arbitry name you give to refence an element. this does not have to match any real id you have given to the element.   Must end with <u>***underscore***</u>
-
-**propertyTag**   :The name of the property. 
-
-This should reflect in some part the real world property name so its intent is clear.
-
-
+**bindingName** : The arbitry name you give to refence an element. this does not have to match any real id you have given to the element.  But should reflect in some part the symbols target child element and real world property name so its intent is clear.
 
 **value**  			:  The property value to pass in for the override.
 
 **duration** 		:   The duration value for a hype API setElementProperty. 
 
-This comes after the value and is separated by a comma. 			
+This comes after the value and is separated by a comma. 
+
+The duration value is here for completeness in reflection the the setElementProperty API
+
+In most cases you will do any animaions on elements using the normal means with in hype.
+
+But adding a duration here will also allow for the same type of animation afforded to using the setElementProperty in an Hype function. 
+
+
+
+​			
 
 <hr>  	
 
-####  Some Symbol data attribute examples:
+####  Some Examples of **Symbol instance element: **data-bindingNames and values
 
 
 
-| data-elementRef_propertyTag | Value                                                        |
+| data-bindingNamepropertyTag | Value                                                        |
 | :-------------------------- | :----------------------------------------------------------- |
 | data-rect_url               | ${resourcesFolderName}/foo.png                               |
 | data-text_bgcolor           | pink                                                         |
@@ -148,9 +166,13 @@ This comes after the value and is separated by a comma.
 
 
 
-####  Element data attribute:
+#### <u>*Symbol instance* > **Child elements**  : **data-bindingName  : property**</u>
 
-Element's Dataset name and value to use to ACCEPT an override from the parent Symbol Instance
+
+
+How Child Element's **data-bindingNames** and **property** names are used to ACCEPT an override from the parent Symbol Instance
+
+The data-bindingNames  and property names are entered  in the **Additional HTML Attributes** in Hype's Identity Panel as shown here
 
 
 
@@ -158,13 +180,13 @@ Element's Dataset name and value to use to ACCEPT an override from the parent Sy
 
 <hr>
 
-An element's **data-elementRef_propertyTag**   Must match a Parent Symbol's  *data-elementRef_propertyTag*  
+An element's **data-bindingName**  Must match a Parent Symbol's  *data-bindingName*  
 
+ 
 
+**style** 						 :  Add 'style' property name at the beginning using (.) syntax, if the target property is a native css property. ***Do not use it for Hype 's setElementProperty API properties***. 
 
-**style** 						 :  Add 'style' property name at the beginning using (.) syntax, if the target property is a native css property. Do not use it for Hype 's *setElementProperty* API properties. 
-
-**value** 	                     :  This value should be the real a Hype 's *setElementProperty* API property names ,a css property name or other HTML property name you wish to target. 
+**property** 	                     :  This value should be the real a Hype 's *setElementProperty* API property names ,a css property name or other HTML property name you wish to target. 
 
 
 
@@ -172,17 +194,17 @@ An element's **data-elementRef_propertyTag**   Must match a Parent Symbol's  *da
 
 <hr>
 
-*data-elementRef_propertyTag | value*
+*data-bindingNamepropertyTag | property*
 
-*data-elementRef_propertyTag | style.value*    
+*data-bindingNamepropertyTag | style.property*    
 
 <hr>
 
-####  Element data attribute examples:
+####  Some Examples of  Symbol instance > Child element :  data-bindingName
 
 
 
-| data-elementRef_propertyTag | Value                   |
+| data-bindingNamepropertyTag | Value                   |
 | :-------------------------- | :---------------------- |
 | data-rect_url               | background-image        |
 | data-text_bgcolor           | style.backgroundColor   |
@@ -211,13 +233,13 @@ An element's **data-elementRef_propertyTag**   Must match a Parent Symbol's  *da
 
 **Error handling.**
 
-An error will occur if there is a mismatch in the dataset key names (*data-elementRef_*)  being used.
+An error will occur if there is a mismatch in the *data-bindingName  being used.
 
 An error will be thrown in the console giving details and info to help find the mismatch.
  	Data for each error overide in a Symbol instance will be shown.<br>
  	**Symbol ID**<br>
- 	**Mismatched key name**<br>
- 	**Completed override data accepted** by the children elements<br>
+ 	**Mismatched *data-bindingName***<br>
+ 	**Completed overrides** data-bindingnames and values accepted  by the children elements<br>
  	**Expected overrides sent from** the Symbol to the children elements<br>
 
  <img src="README.assets/Screenshot 2021-01-29 at 01.15.52-1883496.jpg" alt="Screenshot 2021-01-29 at 01.15.52" style="zoom:50%;" />
@@ -234,7 +256,7 @@ This is handy if you are not getting the values where you expect.
 
   Data for each fully Completed overide for a Symbol instance will be shown.<br>
  	**Symbol ID**<br>
- 	**Completed override data accepted** by the children elements<br>
+ 	**Completed override** data-bindingnames and values accepted by the children elements<br>
  	**Expected overrides sent from** the Symbol to the children elements<br>
 
 You can also change  **print_debug**  to **false**  to turn it off
