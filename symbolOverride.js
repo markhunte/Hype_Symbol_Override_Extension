@@ -110,26 +110,27 @@ data-bindingName | value,duration
   
   
  ####Some Examples of Symbol instance element data-bindingNames and values
-       
-| data-elementRef_propertyTag | Value                                                        |
-| :-------------------------- | :----------------------------------------------------------- |
-| data-rect_url               | ${resourcesFolderName}/foo.png                               |
-| data-text_bgcolor           | pink                                                         |
-| data-rect1_width            | 400                                                          |
-| data-rect1_height           | 400                                                          |
-| data-rect1_url              | ${resourcesFolderName}/foo2.png                              |
-| data-rect1_backgroundsize   | contain                                                      |
-| data-rect1_backgroundrepeat | no-repea                                                     |
-| data-rect_rotatez           | 20                                                           |
-| data-text2_innertext        | foo other string  or words                                   |
-| data-rect1_scalex           | 2,8                                                          |
-| data-rect1_scaley           | 2,8                                                          |
-| data-text_color             | rgb(233, 205, 85)                                            |
-| data-text_innerhtml         | `<span style="color:gold;font-weight:bold">Skateboarding</span>` |
-| data-text2_innerhtml        | Hello my lovely world                                        |
-| data-square_zindex          | -20                                                          |
-| data-text_innertext         | foo some string or words                                     |
-    
+
+ | data-bindingName           | Value                                                        |
+ | :------------------------- | :----------------------------------------------------------- |
+ | data-rectbgimage           | ${resourcesFolderName}/foo.png                               |
+ | data-textbgcolor           | pink                                                         |
+ | data-rect1width            | 400                                                          |
+ | data-rect1height           | 400                                                          |
+ | data-rect1bgimage          | ${resourcesFolderName}/foo2.png                              |
+ | data-rect1backgroundsize   | contain                                                      |
+ | data-rect1backgroundrepeat | no-repea                                                     |
+ | data-rectrotatez           | 20                                                           |
+ | data-text2innertext        | foo other string  or words                                   |
+ | data-rect1scalex           | 2,8                                                          |
+ | data-rect1scaley           | 2,8                                                          |
+ | data-textcolor             | rgb(233, 205, 85)                                            |
+ | data-textinnerhtml         | `<span style="color:gold;font-weight:bold">Skateboarding</span>` |
+ | data-text2innerhtml        | Hello my lovely world                                        |
+ | data-squarezindex          | -20                                                          |
+ | data-textinnertext         | foo some string or words                                     |
+
+
 
 
 ==========================================
@@ -161,24 +162,24 @@ property             :  This value should be the real Hype ***setElementProperty
       'Examples.
            
 
-| data-elementRef_propertyTag | Value                   |
-| :-------------------------- | :---------------------- |
-| data-rect_url               | background-image        |
-| data-text_bgcolor           | style.backgroundColor   |
-| data-rect1_width            | width                   |
-| data-rect1_height           | height                  |
-| data-rect1_url              | background-image        |
-| data-rect1_backgroundsize   | style.background-size   |
-| data-rect1_backgroundrepeat | style.background-repeat |
-| data-rect_rotatez           | rotateZ                 |
-| data-text2_innertext        | innerText               |
-| data-rect1_scalex           | scaleX                  |
-| data-rect1_scaley           | scaleY                  |
-| data-text_color             | style.color             |
-| data-text_innerhtml         | innerHTML               |
-| data-text2_innerhtml        | innerHTML               |
-| data-square_zindex          | z-index                 |
-| data-text_innertext         | innerText               |
+ | data-bindingNamepropertyTag | Value                   |
+ | :-------------------------- | :---------------------- |
+ | data-rectbgimage            | background-image        |
+ | data-textbgcolor            | style.backgroundColor   |
+ | data-rect1width             | width                   |
+ | data-rect1height            | height                  |
+ | data-rect1bgimage           | background-image        |
+ | data-rect1backgroundsize    | style.background-size   |
+ | data-rect1backgroundrepeat  | style.background-repeat |
+ | data-rectrotatez            | rotateZ                 |
+ | data-text2innertext         | innerText               |
+ | data-rect1scalex            | scaleX                  |
+ | data-rect1scaley            | scaleY                  |
+ | data-textcolor              | style.color             |
+ | data-textinnerhtml          | innerHTML               |
+ | data-text2innerhtml         | innerHTML               |
+ | data-squarezindex           | z-index                 |
+ | data-textinnertext          | innerText               |
 
 
 
