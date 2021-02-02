@@ -195,6 +195,7 @@ data-bindingName | style.property
       •Expected overrides sent from** the Symbol to the children elements
 
 •You can also change  print_debug  to true to give debug data in the console. This is handy if you are not getting the values where you expect.
+
 •Data for each fully Completed overide for a Symbol instance will be shown.
  Symbol ID
  Completed override data accepted by the children [object]
@@ -207,7 +208,7 @@ data-bindingName | style.property
        
    //----- turn DEBUGGER true = ON or false = OFF ----
    
-         print_debug = true
+         print_debug = false
 
 
 
