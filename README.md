@@ -1,7 +1,7 @@
 # Hype Symbol Override Extension
  Override Symbol Instance Properties
 
- <img src="README.assets/Screenshot 2021-01-29 at 20.55.38.jpeg" alt="Screenshot 2021-01-29 at 20.55.38" style="zoom:50%;" />
+ ![ExtensionHeadImage](README.assets/ExtensionHeadImage.jpg)
 
 This Extension will run on Symbol Load (*HypeSymbolLoad*).
 
