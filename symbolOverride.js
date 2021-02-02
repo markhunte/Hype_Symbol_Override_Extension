@@ -39,12 +39,12 @@ function symbolOverride_extension(hypeDocument, element, event) {
 
 
 
- Each Symbol's Child element can be assigned dataset key names  [data-bindingName] and [Property] names.
+Each Symbol's Child element can be assigned dataset key names  [data-bindingName] and [Property] names.
 
- When a Parent  Symbol 'Instance' element  has a matching 'data-bindingName' and is given a 'value' the child element will use the 'value' to overide it's targeted
- property
+When a Parent  Symbol 'Instance' element  has a matching 'data-bindingName' and is given a 'value' the child element will use the 'value' to overide it's targeted
+property
 
- Each 'data-bindingName'  must only be used per child element.
+Each 'data-bindingName'  must only be used per child element.
 
  The Child element must use its own unique 'data-bindingNames'.
 For example, You may want to change the 'Left' and 'Top' of 'Rectangle 1' and 'Rectangle 2'.
@@ -60,7 +60,7 @@ You could use the 'data-bindingName's.
 
 
 ============
-  Tip:
+  ##Tip:
  For readability : You may want to add an Underscore between the element ref and property ref in a data-bindingName.
  
  For example. instead of 'data-react1bgimage' use 'data-react1_bgimage Or you can use camel Hump  syntax. 'data-react1InnerText'
@@ -77,9 +77,9 @@ You could use the 'data-bindingName's.
  If a Child Element's data-bindingName is to be used then there must be a matching data-bindingName in the Parent Symbol Instance for this to happen.
 
 
- ####  A Symbol instance element:  data-bindingName: `value`
+ #### A Symbol instance element:  data-bindingName: `value`
 
- *How Symbol Instance **data-bindingNames** and **values** are set to override Symbol Instance **child elements.***
+ #How Symbol Instance 'data-bindingNames' and 'values' are set to override Symbol Instance child elements.
 The data-bindingNames  and values are entered  in the 'Additional HTML Attributes' in Hype's Identity
  
  ##constructions explained
@@ -94,11 +94,11 @@ data-bindingName | value,duration
 
  bindingName : The arbitry name you give to refence an element. this does not have to match any real id you have given to the element.  But should reflect in some part the symbols target child element and real world property name so its intent is clear.
 
- ###### The Value
+ ###The Value
 
- value              :  The property value to pass in for the override.
+ •value              :  The property value to pass in for the override.
 
- duration         :   The duration value for a hype API setElementProperty.
+ •duration         :   The duration value for a hype API setElementProperty.
 
  This comes after the value and is separated by a comma.
 
@@ -137,12 +137,12 @@ data-bindingName | value,duration
  
 
 
- #### The symbols  > Child Elements  : data-bindingName  : property
+ ####The symbols  > Child Elements  : data-bindingName  : property
 How Child Element's **data-bindingNames** and **property** names are set to ACCEPT an override from it's parent Symbol Instance
 The data-bindingNames  and property names are entered  in the **Additional HTML Attributes** in Hype's Identity Panel as shown here
 
  
-  ##Constructions explained
+##Constructions explained
 
 data-bindingName | property
 
@@ -153,9 +153,9 @@ data-bindingName | style.property
 
  ( The Parent Symbol **Instance**  would need to include the same *data-bindingName* as this child's *data-bindingName* if required for that instance's use )
 
-style.              :  Add 'style' property name at the beginning using (.) syntax, if the target property is a native css property. Do not use it for Hype 's                                      setElementProperty API properties.
+•style.              :  Add 'style' property name at the beginning using (.) syntax, if the target property is a native css property. Do not use it for Hype 's                                      setElementProperty API properties.
 
-property             :  This value should be the real Hype ***setElementProperty*** API property names , a real **css** property name or **other real HTML**                                         property name you wish to target.
+•property             :  This value should be the real Hype ***setElementProperty*** API property names , a real **css** property name or **other real HTML**                                         property name you wish to target.
 
 
 
@@ -183,13 +183,16 @@ property             :  This value should be the real Hype ***setElementProperty
 
 
 
-•An error will occur if there is a mismatch.
-•An error will be thrown in the console giving details and info to help find the mismatch.
- Data for each error overide in a Symbol instance will be shown.
- Symbol ID
- Mismatched key name
- Completed override data accepted by the children [object]
- Expected overrides sent from the Symbol to the children. [object]
+##Error handling
+
+ An error will occur if there is a mismatch in the data-bindingName  being used.
+
+ An error will be thrown in the console giving details and info to help find the mismatch.
+      Data for each error overide in a Symbol instance will be shown.
+      •Symbol ID
+      •Mismatched *data-bindingName
+      •Completed overrides** data-bindingnames and values accepted  by the children elements
+      •Expected overrides sent from** the Symbol to the children elements
 
 •You can also change  print_debug  to true to give debug data in the console. This is handy if you are not getting the values where you expect.
 •Data for each fully Completed overide for a Symbol instance will be shown.
@@ -292,6 +295,12 @@ if (typeof thisElement != "undefined"){
  
 }
 
+    //+++++++++ STEMMING FUNCTION ++++++
+  if (typeof  hypeDocument.functions().stem == 'function') {
+    hypeDocument.functions().stem(hypeDocument, { 'theDataSet':theDataSet,'key':key,'thisElement':thisElement,'property_string':property_string,'property_value_type':property_value_type}, event)
+   
+
+  }
 
 
 
@@ -348,20 +357,10 @@ function debugBuild(elementID,theDataSet){
 //++++ DEBUG LOGS
 function debug(){
 
-// var thisChild = hypeDocument.getElementById( overrides_completed[1]['Element id'])
-  
  
-/// var iterator = thes.values();
-
-        // if  ("childSymbEl_" in thisChild.dataset)  {
-            // var value = thisChild.dataset.childSymbEl_
+ 
              console.log('DEBUG: Symbol overriden : ' + element.id ,{'overrides_expected':  overrides_expected, 'overrides_completed': overrides_completed},'Appears complete')
-           
-       
-        // }
-         
-      
-// }
+   
 
 reset ()
 }
