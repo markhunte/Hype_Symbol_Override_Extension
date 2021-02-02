@@ -66,6 +66,28 @@ You could use the *data-bindingName*s.
 
 The names are entirely up to you but must start with 'data-' and should reflect the target element and property name for easy understanding of intent and when looking back at it at a later time.
 
+
+
+***Tip:***
+
+<hr>
+
+> *For readability : You may want to add an Underscore between the element ref and property ref in a data-bindingName.*
+>
+> *For example.*
+>
+> *instead of **data-react1bgimage** use **data-react1_bgimage***
+>
+> *Or you can use camel Hump  syntax.* 
+>
+> ***data-react1InnerText***
+>
+> *But note at run time the Capped letters are changed to lowercase. This is not an issue for this extension but may if you ever wanted to access the datasets from outside of it's scope should be noted.*
+
+<hr>
+
+
+
 The overriden properties can be normal **css** properties, **hypeDocument.setElementProperty**() properties or **other HTML** properties that can normally be set with javascript.
 
 A Symbol Instance is an instance of a single Symbol on a scene and there can be many instances of the same Symbol on a scene.
@@ -287,22 +309,6 @@ Place the **symbolOverride.js** file in the Hype resources panel, which will lin
 Hype Example  included in download
 
 
-
-Tips:
-
-For readability : You may want to add an Underscore between the element ref and property ref in a data-bindingName.
-
-
-
-For example.
-
-instead of **data-react1bgimage** use **data-react1_bgimage**
-
-Or you can use camel Hump  syntax. 
-
-**data-react1InnerText**
-
-But note at run time the Capped letters are changed to lowercase. This is not an issue for this extension but may if you ever wanted to access the datasets from outside of it's scope should be noted.
 
 
 
