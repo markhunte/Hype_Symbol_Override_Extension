@@ -150,7 +150,7 @@ The duration value is here for completeness in reflection of the setElementPrope
 
 In most cases you will do any animaions on elements using the normal means within hype.
 
-But adding a duration here will also allow for the same type of animation afforded to using the setElementProperty in an Hype function. 
+But adding a duration here will also allow for the same type of animation afforded to using the setElementProperty in an Hype function.  (see example 2)
 
 
 
