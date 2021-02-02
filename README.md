@@ -103,7 +103,8 @@ The data-bindingNames  and values are entered  in the **Additional HTML Attribut
 **constructions**
 
 <hr>
-*data-bindingNamepropertyTag | value*
+data-bindingNamepropertyTag | value
+
 
 *data-bindingNamepropertyTag | value,duration*
 
@@ -135,7 +136,7 @@ But adding a duration here will also allow for the same type of animation afford
 
 <hr>  	
 
-####  Some Examples of **Symbol instance element: **data-bindingNames and values
+####  Some Examples of  Symbol instance element:  data-bindingNames and values
 
 
 
