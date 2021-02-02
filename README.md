@@ -3,7 +3,7 @@
 
  <img src="README.assets/Screenshot 2021-01-29 at 20.55.38.jpeg" alt="Screenshot 2021-01-29 at 20.55.38" style="zoom:50%;" />
 
-This Extension will run on Symbol Load.
+This Extension will run on Symbol Load (*HypeSymbolLoad*).
 
 
 
@@ -19,7 +19,7 @@ This extension gives you a way to easily override many of the Symbol instance's 
 
 
 
-*Four instances of a single Symbol.*
+*Four instances of a single Symbol on a Scene.*
 
 <img src="README.assets/Screenshot 2021-01-28 at 23.41.27.jpg" alt="Screenshot 2021-01-28 at 23.41.27" style="zoom:50%;" />
 
@@ -40,12 +40,13 @@ With the Extension and on Symbol load.
 <hr>
 
 
+ Individual Symbol instance properties can be overriden to allow each instance of the symbol to  be displayed differently and behave differently from each other at load time.
 
- Individual Symbol instance properies can be overriden to allow each instance of the symbol to  be displayed differently and behave differently from each other at load time.
 
-Each Symbol Instance can be assigned dataset key names  (*data-bindingName*) and values. 
 
-Any Symbol Instance's children that have the matching *data-bindingName* will use the value to overide it's properties
+Each Symbol Instance **child element** can be assigned dataset key names  [***data-bindingName***] and **Property** names. 
+
+When the Parent  **Symbol Instance's element**  has the matching ***data-bindingName***, the child element will use the **value** to overide it's targeted  **property**
 
 Each *data-bindingName*  must only be used per child element. Any child element must have its own unique dataset key name.
 
