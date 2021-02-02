@@ -46,7 +46,7 @@ With the Extension and on Symbol load.
 
 Each Symbol Instance **child element** can be assigned dataset key names  [***data-bindingName***] and **Property** names. 
 
-When the Parent  **Symbol Instance's element**  has the matching ***data-bindingName***, the child element will use the **value** to overide it's targeted  **property**
+When the Parent  **Symbol Instance element**  has the matching ***data-bindingName***, the child element will use the **value** to overide it's targeted  **property**
 
 Each *data-bindingName*  must only be used per child element. Any child element must have its own unique dataset key name.
 
