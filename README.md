@@ -49,7 +49,7 @@ Any Symbol Instance's children that have the matching *data-bindingName* will us
 
 Each *data-bindingName*  must only be used per child element. Any child element must have its own unique dataset key name.
 
-For example You want to chnage the Left and Top of *Rectangle 1*and Rectangle 2.
+For example You want to chnage the Left and Top of ***Rectangle 1*** and **Rectangle 2**.
 
 You could use the *data-bindingName*s.
 
@@ -76,7 +76,7 @@ An Element's data-bindingName  is to be used, must the matching data-bindingName
 
 <hr>
 
-#### <u>**Symbol instance element: **data-bindingName: `value`</u>
+#### **Symbol instance element: **data-bindingName: `value`
 
 
 
