@@ -170,7 +170,7 @@ But adding a duration here will also allow for the same type of animation afford
 | data-rect1height           | 400                                                          |
 | data-rect1bgimage          | ${resourcesFolderName}/foo2.png                              |
 | data-rect1backgroundsize   | contain                                                      |
-| data-rect1backgroundrepeat | no-repea                                                     |
+| data-rect1backgroundrepeat | no-repeat                                                    |
 | data-rectrotatez           | 20                                                           |
 | data-text2innertext        | foo other string  or words                                   |
 | data-rect1scalex           | 2,8                                                          |
