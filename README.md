@@ -166,7 +166,7 @@ But adding a duration here will also allow for the same type of animation afford
 
 
 
-#### <u>*Symbol instance*  > **Child elements**  : **data-bindingName  : property**</u>
+#### Symbol instance  > **Child elements**  : **data-bindingName  : property**
 
 
 
