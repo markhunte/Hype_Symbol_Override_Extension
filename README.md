@@ -254,24 +254,24 @@ For a element's  property, like innerHtml  use:
 
 
 
-| data-bindingName           | Property type : Value   |
-| :------------------------- | :---------------------- |
-| data-rectbgimage           | hype : background-image |
-| data-textbgcolor           | css : backgroundColor   |
-| data-rect1width            | hype: width             |
-| data-rect1height           | hype: height            |
-| data-rect1bgimage          | hype: background-image  |
-| data-rect1backgroundsize   | css: background-size    |
-| data-rect1backgroundrepeat | css: background-repeat  |
-| data-rectrotatez           | hype: rotateZ           |
-| data-text2innertext        | element: innerText      |
-| data-rect1scalex           | hype: scaleX            |
-| data-rect1scaley           | hype: scaleY            |
-| data-textcolor             | css: color              |
-| data-textinnerhtml         | element: innerHTML      |
-| data-text2innerhtml        | eleement: innerHTML     |
-| data-squarezindex          | hype: z-index           |
-| data-textinnertext         | element: innerText      |
+| data-bindingName           | Property type : Property |
+| :------------------------- | :----------------------- |
+| data-rectbgimage           | hype : background-image  |
+| data-textbgcolor           | css : backgroundColor    |
+| data-rect1width            | hype: width              |
+| data-rect1height           | hype: height             |
+| data-rect1bgimage          | hype: background-image   |
+| data-rect1backgroundsize   | css: background-size     |
+| data-rect1backgroundrepeat | css: background-repeat   |
+| data-rectrotatez           | hype: rotateZ            |
+| data-text2innertext        | element: innerText       |
+| data-rect1scalex           | hype: scaleX             |
+| data-rect1scaley           | hype: scaleY             |
+| data-textcolor             | css: color               |
+| data-textinnerhtml         | element: innerHTML       |
+| data-text2innerhtml        | eleement: innerHTML      |
+| data-squarezindex          | hype: z-index            |
+| data-textinnertext         | element: innerText       |
 
 
 
