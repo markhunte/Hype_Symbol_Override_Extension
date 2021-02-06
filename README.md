@@ -129,8 +129,7 @@ The data-bindingNames  and values are entered  in the **Additional HTML Attribut
 **constructions explained**
 
 <hr>
-*data-bindingName | value*
-
+data-bindingName | value
 
 *data-bindingName | value,duration*
 
@@ -252,7 +251,7 @@ element::**
 
 
 
-| data-bindingName           | Value                   |
+| data-bindingName           | Property type : Value   |
 | :------------------------- | :---------------------- |
 | data-rectbgimage           | hype : background-image |
 | data-textbgcolor           | css : backgroundColor   |
@@ -288,11 +287,13 @@ An error will be thrown in the console giving details and info to help find the 
  	**Symbol ID**<br>
  	**Mismatched *data-bindingName***<br>
  	**Completed overrides** data-bindingnames and values accepted  by the children elements<br>
- 	**Expected overrides sent from** the Symbol to the children elements<br>
+ 	**Symbol Instance Overrides Expected** sent from  the Symbol to the children elements<br>
 
- <img src="README.assets/Screenshot 2021-01-29 at 01.15.52-1883496.jpg" alt="Screenshot 2021-01-29 at 01.15.52" style="zoom:50%;" />
+ <img src="README.assets/Screenshot 2021-02-06 at 21.08.34.jpg" alt="Screenshot 2021-02-06 at 21.08.34" style="zoom:50%;" />
 
 
+
+<hr>
 
 
 
@@ -304,14 +305,14 @@ This is handy if you are not getting the values where you expect.
 
   Data for each fully Completed overide for a Symbol instance will be shown.<br>
  	**Symbol ID**<br>
- 	**Completed override** data-bindingnames and values accepted by the children elements<br>
- 	**Expected overrides sent from** the Symbol to the children elements<br>
+ 	**Completed overrides** data-bindingnames and values accepted by the children elements<br>
+ 	**Symbol Instance Overrides Expected** sent from the Symbol to the children elements<br>
 
 You can  change  **print_debug**  to **false**  to turn it off. ( see below for more  **1* )
 
 
 
-<img src="README.assets/Screenshot 2021-01-29 at 01.14.18-1883315.jpg" alt="Screenshot 2021-01-29 at 01.14.18" style="zoom:50%;" />
+<img src="README.assets/Screenshot 2021-02-06 at 21.09.54.jpg" alt="Screenshot 2021-02-06 at 21.09.54" style="zoom:50%;" />
 
 
 
