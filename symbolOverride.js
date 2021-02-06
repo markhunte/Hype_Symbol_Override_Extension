@@ -368,7 +368,7 @@ function symbolOverride_extension(hypeDocument, element, event) {
             default:
            //+++ OTHER GENERAL TYPE ATTRIBUTES
            
-           console.log(property_string)
+          
            
           thisElement[property_string]  = theDataSet[key]
               
