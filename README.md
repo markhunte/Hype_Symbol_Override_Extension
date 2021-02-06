@@ -241,7 +241,7 @@ For an element's **css**  property, ones that the **hypeDocument.setElementPrope
 
 For a element's  property, like innerHtml  use:
 
-element::**
+**element:**
 
 
 
