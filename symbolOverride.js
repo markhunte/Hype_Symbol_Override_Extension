@@ -172,7 +172,7 @@ function symbolOverride_extension(hypeDocument, element, event) {
         'Examples.
              
   
-   | data-bindingName           | Property type : Value   |
+   | data-bindingName           | Property type : Property|
    | :------------------------- | :---------------------- |
    | data-rectbgimage           | hype : background-image |
    | data-textbgcolor           | css : backgroundColor   |
