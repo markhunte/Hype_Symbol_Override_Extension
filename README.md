@@ -110,7 +110,7 @@ If a Child Element's data-bindingName is to be used then there must be a matchin
 
 
 <hr>
-####  A Symbol Instance  Element data-bindingName: `value`
+#### A Symbol Instance  Element data-bindingName: `value`
 
 *How Symbol Instance **data-bindingNames** and **values** are set to override Symbol Instance **child elements.***
 
