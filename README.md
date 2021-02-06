@@ -299,7 +299,7 @@ An error will be thrown in the console giving details and info to help find the 
 
 **print_debug** 
 
-If **print_debug**  is on ( set to **true** ) The console will give the following data.
+If **print_debug**  is on ( set to **true** ) the console will give the following data.  The default is false
 
 This is handy if you are not getting the values where you expect.
 
@@ -308,7 +308,7 @@ This is handy if you are not getting the values where you expect.
  	**Completed overrides** data-bindingnames and values accepted by the children elements<br>
  	**Symbol Instance Overrides Expected** sent from the Symbol to the children elements<br>
 
-You can  change  **print_debug**  to **false**  to turn it off. ( see below for more  **1* )
+To change . ( see below for more  **1* )
 
 
 
