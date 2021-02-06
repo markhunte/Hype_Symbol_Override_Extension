@@ -203,17 +203,55 @@ function symbolOverride_extension(hypeDocument, element, event) {
         •Mismatched *data-bindingName
         •Completed overrides** data-bindingnames and values accepted  by the children elements
         Symbol Instance Overrides Expected sent from** the Symbol to the children elements
-  
-  •You can also change  print_debug  to true to give debug data in the console. This is handy if you are not getting the values where you expect.
+ 
+   
+   ==================
+   
+  •If  print_debug  is on ( set to  true ) the console will give the following data.  The default is false.
+   
+
+   This is handy if you are not getting the values where you expect.
+   
   •Data for each fully Completed overide for a Symbol instance will be shown.
    Symbol ID
    Completed override data accepted by the children [object]
    Symbol Instance Overrides Expected sent from the Symbol to the children. [object]
   
-  
+   The print_debug can be either turned on/off by going into the code and changeing the line
+
+   print_debug = false
+   
+   to
+   print_debug = true
+   
+ 
+   Alternatively you can add a special Hype Function to your project (Not inside a symbol)
+
+   The hype functions MUST be named stem
+
+   Inside the stem() function you can add the line
+
+   print_debug = true
+
+   You do not need to set the stem() function to run via any action. The Hype Symbol Override Extension will run the stem function for each symbol instance if the stem() function exists.
+
+   ###Hype stem function
+
+   // element - DOMHTMLElement that triggered this function being called
+
+   // event - event that triggered this function being called*
+
+   function stem(hypeDocument, element, event) {
+
+    
+       print_debug = true
+
+   }
   
   */
-  
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    
          
      //----- turn DEBUGGER true = ON or false = OFF ----
      
