@@ -15,7 +15,7 @@ For example you may be using a Symbol to display images and text but want differ
 
 <hr>
 
-This extension gives you a way to easily override many of the Symbol instance's properties.
+This extension gives you a way to easily override many of a Symbol instance's child element's perameters/properties.
 
 
 
