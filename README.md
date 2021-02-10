@@ -1,3 +1,5 @@
+THIS WILL BE UPDATED SOON TO REFLECT CHANGES IN v1.10
+
 # Hype Symbol Override Extension
  Override Symbol Instance Properties
 
