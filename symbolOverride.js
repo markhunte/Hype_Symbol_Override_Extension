@@ -118,14 +118,20 @@ var property_string = thisElement.dataset[key]
 
     var result =  CSS.supports(property_value + " : " + theDataSet[key]);
     
-   /*++ The setElementPropety API properties will resolve as has css type if they have the css: type name
+   /*++ The setElementPropety API properties will resolve as css type if they have the css: type name
     
-    z-index will always resolve as css so we treat it as a special case below.
+    Some setElementPropety API Properties will always resolve as css even with the Hype anme or not so we treat them as a special cases below.
     */
      
     if (result){
         
-        if (property_value != 'z-index' ){ //-- special case, will resolve as css always if we do not check here
+        
+        
+        var property_valueAr  = ['opacity','z-index']
+       /* Special cases, Will resolve as css always if we do not check here and Not as Hype API.
+        Must explicitly name type as css: to override with CSS
+        */
+        if (! property_valueAr.includes(property_value)  ){
 
             property_type = "css"
                }
