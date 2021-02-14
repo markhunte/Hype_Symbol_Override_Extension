@@ -39,11 +39,9 @@
   
   Each Symbol's Child element can be assigned dataset key names  [data-bindingName] and [Property] names.
   
-  When a Parent  Symbol 'Instance' element  has a matching 'data-bindingName' and is given a 'value' the child element will use the 'value' to overide it's targeted
-  property
+  When a Parent  Symbol 'Instance' element  has a matching 'data-bindingName' and is given a 'value' the child element will use the 'value' to overide it's targeted property
  
  Symbol elements can also share the same data-bindingName and will be overriden with the same value.
-
  
  For full documentation and guide go to :
     https://github.com/markhunte/Hype_Symbol_Override_Extension
@@ -108,15 +106,15 @@ var property_string = thisElement.dataset[key]
 
     
     var property_array = property_string.split(':')
-    var property_type = property_array[0].trim()
+    var caseCondition = property_array[0].trim()
     
      // and the last will be the value
-     var property_value = property_array[(property_array.length - 1)].trim()
+     var property_ = property_array[(property_array.length - 1)].trim()
     
   
     //++ TEST if a CSS property
 
-    var result =  CSS.supports(property_value + " : " + theDataSet[key]);
+    var result =  CSS.supports(property_ + " : " + theDataSet[key]);
     
    /*++ The setElementPropety API properties will resolve as css type if they have the css: type name
     
@@ -127,29 +125,29 @@ var property_string = thisElement.dataset[key]
         
         
         
-        var property_valueAr  = ['opacity','z-index']
+        var property_Ar  = ['opacity','z-index']
        /* Special cases, Will resolve as css always if we do not check here and Not as Hype API.
         Must explicitly name type as css: to override with CSS
         */
-        if (! property_valueAr.includes(property_value)  ){
+        if (! property_Ar.includes(property_)  ){
 
-            property_type = "css"
+            caseCondition = "css"
                }
     }
     
     
-switch( property_type) {
+switch( caseCondition) {
 
 //+++ CSS STYLE  TYPE ATTRIBUTES
 case 'css'  :
- if (property_value == 'z-index'  ) {
+ if (property_ == 'z-index'  ) {
            
           //-- The css needs to z-index the container
-           thisElement.parentNode.style[property_value] = theDataSet[key]
+           thisElement.parentNode.style[property_] = theDataSet[key]
        
         } else {
            
-            thisElement.style[property_value] = theDataSet[key]
+            thisElement.style[property_] = theDataSet[key]
        }
        
 
@@ -157,6 +155,7 @@ case 'css'  :
 hype_api = false
 css_ = true
 element_ = false
+general_element = false
 
 
 break;
@@ -179,12 +178,12 @@ case 'background-image':
 
 
 var splitValues = theDataSet[key].split(',')
-var propName = property_type
+var propName = caseCondition
 
 //-- We may or may not have a specified hype type , but want to catch them as well as hype types here. Sow e only ever use Hype API for these.
-//-- wee need to swap around  property_value & property_type
-if (property_type == "hype"){
-propName =  property_value
+//-- wee need to swap around  property_ & caseCondition
+if (caseCondition == "hype"){
+propName =  property_
 }
 
 
@@ -198,14 +197,16 @@ hypeDocument.setElementProperty( thisElement, propName, value,duration,timingFun
 hype_api = true
 css_ = false
 element_ =false
+general_element = false
 break;
 case 'element'  :
 
-thisElement[property_value]  = theDataSet[key]
+thisElement[property_]  = theDataSet[key]
 
 hype_api = false
 css_ = false
 element_ = true
+general_element = false
 
 break;
 default:
@@ -213,13 +214,17 @@ default:
  
 thisElement[property_string]  = theDataSet[key]
 
-
+        
+        hype_api = false
+        css_ = false
+        element_ = false
+        general_element = true
 }
 
 //+++++++++ STEMMING FUNCTION ++++++
 if (typeof  hypeDocument.functions().stem == 'function') {
     
-hypeDocument.functions().stem(hypeDocument, { 'theDataSet':theDataSet,'key':key,'thisElement':thisElement,'property_string':property_string,'property_type':property_type}, event)
+hypeDocument.functions().stem(hypeDocument, { 'theDataSet':theDataSet,'key':key,'thisElement':thisElement,'property_string':property_string,'caseCondition':caseCondition}, event)
  
 }
 
@@ -227,7 +232,7 @@ hypeDocument.functions().stem(hypeDocument, { 'theDataSet':theDataSet,'key':key,
 
 //+++++++++ DEBUG DATA ++++++
 
-loadDebugDataTransfer(thisElement,key,theDataSet,property_type,property_value,splitValues,hype_api,propName,value,duration,timingFunctionNameOrMathEquationFunction)
+loadDebugDataTransfer(thisElement,key,theDataSet,caseCondition,property_,splitValues,hype_api,propName,value,duration,timingFunctionNameOrMathEquationFunction)
 
  
 
@@ -300,7 +305,7 @@ function debugondemand(){
 function thrown(err ){
 
     console.log( err )
-    console.log( err.name  + ' - Symbol override Extension May have a mismatch in ' , 'Symbol - ' + element.id,{'Error with  Override : data-bindingName ':key, 'override property ':  property_type ,'override  property value ':  property_value ,  Symbol_Instance_Overrides_expected,'overrides_completed': overrides_completed}  )
+    console.log( err.name  + ' - Symbol override Extension May have a mismatch in ' , 'Symbol - ' + element.id,{'Error with  Override : data-bindingName ':key, 'override property ':  caseCondition ,'override  property ':  property_ ,  Symbol_Instance_Overrides_expected,'overrides_completed': overrides_completed}  )
 
 
 reset ()
@@ -338,10 +343,11 @@ function  setDefaultsOnPropertyTypes(){
 hype_api = false
 css_ = false
 element_ = false
+general_element = false
 }
 
 
-function loadDebugDataTransfer(thisElement,key,theDataSet,property_type,property_value,splitValues,hype_api,propName,value,duration,timingFunctionNameOrMathEquationFunction){
+function loadDebugDataTransfer(thisElement,key,theDataSet,caseCondition,property_,splitValues,hype_api,propName,value,duration,timingFunctionNameOrMathEquationFunction){
 
 
 overrides_completed.push({
@@ -352,15 +358,17 @@ overrides_completed.push({
                          
                          "Element target value":theDataSet[key],
                          "css Type property" :css_,
-                         "property_type ":property_type,
-                         "property_value": property_value,
+                         "caseCondition ":caseCondition,
+                         "property_": property_,
                          "splitValues": splitValues,
                          "hype_api Type property": hype_api,
                          "hype_api propName": propName ,
                          "hype_api value": value ,
                          "hype_api duration": duration ,
                          "hype_api timing": timingFunctionNameOrMathEquationFunction,
-                         "element Type property" :element_
+                         "element Type property" :element_,
+                        "General element Type property" :general_element,
+    
                          
                          })
 }
@@ -368,8 +376,8 @@ overrides_completed.push({
 function reset(){
 
 key =""
-property_type = undefined
-property_value = undefined
+caseCondition = undefined
+property_ = undefined
 splitValues = undefined
 propName = undefined
 value = undefined
@@ -379,6 +387,7 @@ timingFunctionNameOrMathEquationFunction = undefined
 hype_api =false
 css_ = false
 element_ = false
+general_element = false
 
 }
 
@@ -425,4 +434,3 @@ return {
 };
 
 })();
-
