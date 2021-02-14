@@ -405,7 +405,7 @@ return true;
 
        if (Symbols_Overriden.length > 0){
            
-           Symbols_Overriden.forEach(element => console.log(element));
+           Symbols_Overriden.forEach(element => console.log('DEBUG: Symbol overriden',element));
            
        }
     
