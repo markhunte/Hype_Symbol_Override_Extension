@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>Hype_Symbol_Override_Extension</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#FFF;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+	<script type="text/javascript" src="docs.hyperesources/symbolOverride.js"></script>
+ 
+	<style>
+    	.felem {  
+      float: left!important;
+      shape-outside: rectange(50%)!important;
+       width: 208px!important;
+      height: 208px!important;
+      
+    }	
+    	</style>
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="docs_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="docs.hyperesources/docs_hype_generated_script.js?35032"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div>Quick Start</div>
+		<div>Rocket image by : Business psd created by rawpixel.com - www.freepik.com</div>
+		<div></div>
+		<div>Hype Symbol Override Extension</div>
+		<div>Hype Symbol Override Extension</div>
+		<div>    Sirlon Butt</div>
+		<div>    D - Rump</div>
+		<div>    Round</div>
+		<div>   Advanced</div>
+		<div>This extension gives you a way to easily override many of a Symbol instance's child element's perameters/properties</div>
+		<div>The Same Four instances running with the Extension.</div>
+		<div>As you have seen in the Quick Start or The Video,
+
+Individual Symbol instance properties can be overriden to allow each instance of the symbol to be displayed differently and behave differently from each other at load time. Each Symbol's child elements can be assigned a target property type.</div>
+		<div>Four instances of a single Symbol on a Scene</div>
+		<div>Property Names can be for:
+  
+hypeDocument.setElementProperty() API property Names, css property Names, element HTML property Names.
+
+</div>
+		<div>hypeDocument.setElementProperty() API Property Names 
+</div>
+		<div>fig2</div>
+		<div>By Default for these Property names, in fig 1 the Extension will try and use The hypeDocument.setElementProperty() API to override</div>
+		<div>Example Values set on a Symbol Instance
+</div>
+		<div>data-bindingName: Properties ( hypeDocument.setElementProperty())
+</div>
+		<div>fig1</div>
+		<div>You can add duration timmings to any of the hypeDocument.setElementProperty() API that take them
+
+
+value : The property value to pass in for the override.
+</div>
+		<div>Values set on a Symbol Instance with duration
+</div>
+		<div>duration : The duration value for a hype API setElementProperty. (optional)
+This comes after the value and is separated by a comma.
+The duration value is here for completeness in reflection of the setElementProperty API usage.
+In most cases you will do any animaions on elements using the normal means within hype.
+But adding a duration here will also allow for the same type of animation afforded to using the setElementProperty in an Hype function. (see the Hype zipped example 2)
+</div>
+		<div>value, duration ( hypeDocument.setElementProperty())
+</div>
+		<div>data-bindingName | value, duration
+</div>
+		<div>Docs</div>
+		<div>data-bindingName | value
+</div>
+		<div>The data-bindingName
+data- : All names must start with this.
+bindingName : The arbitry name you give to refence an element. this does not have to match any real id you have given to the element. But should reflect in some part the symbols target child element and real world property name so its intent is clear.e
+The Property Name:  The property Name to pass in for the override.
+</div>
+		<div>The data-bindingName
+data- : All names must start with this.
+bindingName : Matching name on a Symbol’s child element
+The Value:value : The property value to pass in for the override.
+
+</div>
+		<div>data-bindingName | Property Name
+</div>
+		<div>Construction of data-bindingName, Propertyname and Values</div>
+		<div>data-bindingName: Properties ( css )
+</div>
+		<div>Here we  we set a text shadow and font size in percent
+</div>
+		<div>Remember that many css numbers are followed by ‘px’ in some cases you may need to enter a px. i.e  10px
+</div>
+		<div>When using css properties, In some cases if you are not getting the expected results, you may need to turn off Protect from external styles and set the Position with CSS left/top. Both of which can be found in the Document Inspector.
+</div>
+		<div>Here we  we set the background image of an Rect and some image properties
+</div>
+		<div>There are too many css Poroperties to show here but many of them can be used.
+
+
+</div>
+		<div>The extension will try and test for valid css properties and values entered as overrides.
+If they are found to be ok then they will be overriden as css properties
+</div>
+		<div>Original</div>
+		<div>New Text</div>
+		<div>As shown in the Quick Start pages, The data-bindingName and Value are entered into the Symbol’ instanceAdditionl HTML Attributes
+Just select the Symbol, taking care not to enter into it and go to the Identity Inspector. Click the + button and add a new data-BindingName and the corresponding Value.</div>
+		<div>data-bindingName override Values and Property names - Entry</div>
+		<div>The data-bindingName and Property names we want to override are entered into the Additionl HTML Attributes of an Element inside a Symbol
+
+Just select the Symbol, taking care not to enter into it and go to the Identity Inspector. Click the + button and add a new data-BindingName and the corresponding Value.</div>
+		<div>data-bindingName: Properties ( element )
+</div>
+		<div>Here we have a Hype video dropped onto the scene. We use the src property to change its video src and innerHTML to show its Title anc copyright url.
+
+The innnerHTML can be simpl text like ‘ some foo bunny text’  It does not have to be complex or HTML code. 
+</div>
+		<div>For example, innerHTML, innerText, src  (Hype Audio/video object), borders etc..
+</div>
+		<div>Elements Properties can directly be overriden 
+
+
+</div>
+		<div>Video Title</div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>
