@@ -3,7 +3,7 @@
  ++++++ SYMBOL OVERRIDE EXTENSION    ++++++
  
  By Mark Hunte 2021
- Versions: 1.1.2
+ Versions: 1.1.3
  MIT License
  Copyright (c) Mark Hunte 2021
  

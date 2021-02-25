@@ -38,7 +38,7 @@
 	<!-- copy these lines to your document: -->
 
 	<div id="docs_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="docs.hyperesources/docs_hype_generated_script.js?82896"></script>
+		<script type="text/javascript" charset="utf-8" src="docs.hyperesources/docs_hype_generated_script.js?63398"></script>
 	</div>
 
 	<!-- end copy -->
@@ -63,6 +63,8 @@
 		<div>As you have seen in the Quick Start or The Video,
 
 Individual Symbol instance properties can be overriden to allow each instance of the symbol to be displayed differently and behave differently from each other at load time. Each Symbol's child elements can be assigned a target property type.</div>
+		<div> The Extension can be downloaded from the  GitHub Read Me Page  > here
+</div>
 		<div>Four instances of a single Symbol on a Scene</div>
 		<div>Property Names can be for:
   
@@ -167,9 +169,35 @@ But adding a duration here will also allow for the same type of animation afford
 </div>
 		<div>data-bindingName | value, duration
 </div>
+		<div>The innnerHTML can be simple plain text like ‘ some foo bunny text’  It does not have to be complex or HTML code. </div>
+		<div>Here we have a Hype video dropped onto the scene. We use the src property to change its video src and innerHTML to show its Title anc copyright url.
+
+
+</div>
 		<div>For example, innerHTML, innerText, src  (Hype Audio/video object), borders etc..
 </div>
 		<div>Docs</div>
+		<div>Error Logging</div>
+		<div>Here we have a the dataBindingName spelt wrong.
+On the Symbol’s Child Element in the Symbol override. It is data-text1_innerText. 
+</div>
+		<div>Error Logging.An error will occur if there is a mismatch in the data-bindingName being used.
+An error will be thrown in the console giving details and info to help find the mismatch. Data for each error overide in a Symbol instance will be shown.
+Symbol ID
+Mismatched data-bindingName
+Symbol Instance Overrides Expected sent from the Symbol to the children elementsCompleted overrides data-bindingnames and values accepted by the children elements
+
+
+</div>
+		<div>But on the Symbol Instance we have it as data-text1_innerText1</div>
+		<div>Here we have a the dataBindingName spelt wrong.
+
+On the Symbol’s Child Element in the Symbol override. It is data-text1_innerText. 
+</div>
+		<div>Debug Logging</div>
+		<div>Printing a debug log
+You can add the single javascript line hypeDocument.printDebugList() to normal  Hype Javascript function and run it on the  first scene’s onload. This will enable debug logs and  print to the console. It  will give the following data. This is handy if you are not getting the values where you expect.
+Data for each fully Completed overide for a Symbol instance will be shown.Symbol IDSymbol Instance Overrides Expected sent from the Symbol to the children elementsCompleted overrides data-bindingnames and values accepted by the children elements, including the property type the extension has used : Hype Api, css, Element , General  property types</div>
 
 	</div>
 
