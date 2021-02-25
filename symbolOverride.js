@@ -3,7 +3,7 @@
  ++++++ SYMBOL OVERRIDE EXTENSION    ++++++
  
  By Mark Hunte 2021
- Versions: 1.1.2
+ Versions: 1.1.3
  MIT License
  Copyright (c) Mark Hunte 2021
  
@@ -390,10 +390,10 @@ if('symbolOverride' in window === false) window['symbolOverride'] = (function() 
             overrides_completed.push({
                 
                 "Element id": thisElement.id,
-                "Element Key":key,
+                "Element data-BindgingName":key,
                 
                 
-                "Element target value":theDataSet[key],
+                "Element override value":theDataSet[key],
                 "css Type property" :css_,
                 "caseCondition ":caseCondition,
                 "property_": property_,
