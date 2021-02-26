@@ -38,7 +38,7 @@
 	<!-- copy these lines to your document: -->
 
 	<div id="docs_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="docs.hyperesources/docs_hype_generated_script.js?63398"></script>
+		<script type="text/javascript" charset="utf-8" src="docs.hyperesources/docs_hype_generated_script.js?17298"></script>
 	</div>
 
 	<!-- end copy -->
@@ -58,28 +58,28 @@
 		<div>    D - Rump</div>
 		<div>    Round</div>
 		<div>   Advanced</div>
-		<div>This extension gives you a way to easily override many of a Symbol instance's child element's perameters/properties</div>
-		<div>The Same Four instances running with the Extension.</div>
+		<div>Four instances of a single Symbol on a Scene</div>
 		<div>As you have seen in the Quick Start or The Video,
 
 Individual Symbol instance properties can be overriden to allow each instance of the symbol to be displayed differently and behave differently from each other at load time. Each Symbol's child elements can be assigned a target property type.</div>
+		<div>The Same Four instances running with the Extension.</div>
+		<div>This extension gives you a way to easily override many of a Symbol instance's child element's perameters/properties</div>
 		<div> The Extension can be downloaded from the  GitHub Read Me Page  > here
 </div>
-		<div>Four instances of a single Symbol on a Scene</div>
+		<div>fig1</div>
+		<div>hypeDocument.setElementProperty() API Property Names 
+</div>
+		<div>Example Values set on a Symbol Instance
+</div>
+		<div>By Default for these Property names, in fig 1 the Extension will try and use The hypeDocument.setElementProperty() API to override</div>
 		<div>Property Names can be for:
   
 hypeDocument.setElementProperty() API property Names, css property Names, element HTML property Names.
 
 </div>
-		<div>hypeDocument.setElementProperty() API Property Names 
-</div>
 		<div>fig2</div>
-		<div>By Default for these Property names, in fig 1 the Extension will try and use The hypeDocument.setElementProperty() API to override</div>
-		<div>Example Values set on a Symbol Instance
-</div>
 		<div>data-bindingName: Properties ( hypeDocument.setElementProperty())
 </div>
-		<div>fig1</div>
 		<div>You can add duration timmings to any of the hypeDocument.setElementProperty() API that take them
 
 
@@ -91,7 +91,7 @@ value : The property value to pass in for the override.
 This comes after the value and is separated by a comma.
 The duration value is here for completeness in reflection of the setElementProperty API usage.
 In most cases you will do any animaions on elements using the normal means within hype.
-But adding a duration here will also allow for the same type of animation afforded to using the setElementProperty in an Hype function. (see the Hype zipped example 2)
+But adding a duration here will also allow for the same type of animations afforded to using the setElementProperty in an Hype function. (see the Hype zipped example 2)
 </div>
 		<div>value, duration ( hypeDocument.setElementProperty())
 </div>
@@ -117,14 +117,10 @@ If they are found to be ok then they will be overriden as css properties
 </div>
 		<div>Original</div>
 		<div>New Text</div>
-		<div>As shown in the Quick Start pages, The data-bindingName and Value are entered into the Symbol’ instanceAdditionl HTML Attributes
-Just select the Symbol, taking care not to enter into it and go to the Identity Inspector. Click the + button and add a new data-BindingName and the corresponding Value.</div>
+		<div>As shown in the Quick Start pages, The data-bindingName and Value are entered into the Symbol’ instance Additionl HTML AttributesJust select the Symbol, taking care not to enter into it and go to the Identity Inspector. Click the + button and add a new data-BindingName and the corresponding Value.</div>
 		<div>data-bindingName override Values and Property names - Entry</div>
-		<div>The data-bindingName and Property names we want to override are entered into the Additionl HTML Attributes of an Element inside a Symbol
-
+		<div>The data-bindingName and Property names we want to override are entered into the Additional HTML Attributes of an Element inside a Symbol
 Just select the Symbol, taking care not to enter into it and go to the Identity Inspector. Click the + button and add a new data-BindingName and the corresponding Value.</div>
-		<div>data-bindingName: Properties ( element )
-</div>
 		<div>Here we have a Hype video dropped onto the scene. We use the src property to change its video src and innerHTML to show its Title anc copyright url.
 
 The innnerHTML can be simple plain text like ‘ some foo bunny text’  It does not have to be complex or HTML code. 
@@ -135,25 +131,26 @@ The innnerHTML can be simple plain text like ‘ some foo bunny text’  It doe
 
 
 </div>
+		<div>data-bindingName: Properties ( element )
+</div>
 		<div>Video Title</div>
+		<div>data-bindingName | Property Name
+</div>
+		<div>The data-bindingNamedata- : All names must start with this.
+bindingName : The arbitrary name you give to reference an element. this does not have to match any real id you have given to the element. But should reflect in some part the symbols target child element and real world property name so its intent is clear.
+The Property Name:  The property Name to pass in for the override.
+
+</div>
+		<div>Construction of data-bindingName, Propertyname and Values</div>
 		<div>The data-bindingName
 data- : All names must start with this.
 bindingName : Matching name on a Symbol’s child element
 The Value:value : The property value to pass in for the override.
 
 </div>
-		<div>The data-bindingName
-data- : All names must start with this.
-bindingName : The arbitry name you give to refence an element. this does not have to match any real id you have given to the element. But should reflect in some part the symbols target child element and real world property name so its intent is clear.e
-The Property Name:  The property Name to pass in for the override.
-</div>
 		<div>data-bindingName | value
 </div>
-		<div>data-bindingName | Property Name
-</div>
-		<div>Construction of data-bindingName, Propertyname and Values</div>
-		<div>The data-bindingName and Property names we want to override are entered into the Additionl HTML Attributes of an Element inside a Symbol
-
+		<div>The data-bindingName and Property names we want to override are entered into the Additional HTML Attributes of an Element inside a Symbol 
 Just select the Symbol, taking care not to enter into it and go to the Identity Inspector. Click the + button and add a new data-BindingName and the corresponding Value.</div>
 		<div>You can add duration timmings to any of the hypeDocument.setElementProperty() API that take them
 
@@ -165,19 +162,19 @@ value : The property value to pass in for the override.
 This comes after the value and is separated by a comma.
 The duration value is here for completeness in reflection of the setElementProperty API usage.
 In most cases you will do any animaions on elements using the normal means within hype.
-But adding a duration here will also allow for the same type of animation afforded to using the setElementProperty in an Hype function. (see the Hype zipped example 2)
+But adding a duration here will also allow for the same type of animations afforded to using the setElementProperty in an Hype function. (see the Hype zipped example 2)
 </div>
 		<div>data-bindingName | value, duration
 </div>
-		<div>The innnerHTML can be simple plain text like ‘ some foo bunny text’  It does not have to be complex or HTML code. </div>
 		<div>Here we have a Hype video dropped onto the scene. We use the src property to change its video src and innerHTML to show its Title anc copyright url.
 
 
 </div>
 		<div>For example, innerHTML, innerText, src  (Hype Audio/video object), borders etc..
 </div>
+		<div>The innnerHTML can be simple plain text like ‘ some foo bunny text’  It does not have to be complex or HTML code. </div>
 		<div>Docs</div>
-		<div>Error Logging</div>
+		<div>But on the Symbol Instance we have it as data-text1_innerText1</div>
 		<div>Here we have a the dataBindingName spelt wrong.
 On the Symbol’s Child Element in the Symbol override. It is data-text1_innerText. 
 </div>
@@ -189,15 +186,31 @@ Symbol Instance Overrides Expected sent from the Symbol to the children element
 
 
 </div>
-		<div>But on the Symbol Instance we have it as data-text1_innerText1</div>
+		<div>Error Logging</div>
 		<div>Here we have a the dataBindingName spelt wrong.
 
 On the Symbol’s Child Element in the Symbol override. It is data-text1_innerText. 
 </div>
-		<div>Debug Logging</div>
 		<div>Printing a debug log
 You can add the single javascript line hypeDocument.printDebugList() to normal  Hype Javascript function and run it on the  first scene’s onload. This will enable debug logs and  print to the console. It  will give the following data. This is handy if you are not getting the values where you expect.
 Data for each fully Completed overide for a Symbol instance will be shown.Symbol IDSymbol Instance Overrides Expected sent from the Symbol to the children elementsCompleted overrides data-bindingnames and values accepted by the children elements, including the property type the extension has used : Hype Api, css, Element , General  property types</div>
+		<div>Debug Logging</div>
+		<div>The data-bindingName
+data- : All names must start with this.
+bindingName : Matching name on a Symbol’s child element
+The Value:value : The property value to pass in for the override.
+
+</div>
+		<div>The data-bindingNamedata- : All names must start with this.
+bindingName : The arbitrary name you give to reference an element. this does not have to match any real id you have given to the element. But should reflect in some part the symbols target child element and real world property name so its intent is clear.
+
+The Property Name:  The property Name to pass in for the override.
+
+</div>
+		<div>data-bindingName | Property Name
+</div>
+		<div>data-bindingName | value
+</div>
 
 	</div>
 
