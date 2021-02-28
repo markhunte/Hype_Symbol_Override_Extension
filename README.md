@@ -1,4 +1,4 @@
-*UPDATED  TO REFLECT CHANGES IN v1.1.3
+*UPDATED  TO REFLECT CHANGES IN v1.1.3*
 
 # Hype Symbol Override Extension
  Override Symbol Instance Properties
