@@ -32,7 +32,7 @@ This extension gives you a way to easily override many of a Symbol instance's ch
 
 
 
-<img src="README.assets/Screenshot 2021-02-25 at 22.06.01.jpg" alt="Screenshot 2021-02-25 at 22.06.01" style="zoom:50%;" />
+<img src="README.assets/footerImage.jpg" alt="footerImage" style="zoom:50%;" />
 
 
 
