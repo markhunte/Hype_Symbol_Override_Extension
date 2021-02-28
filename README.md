@@ -3,7 +3,7 @@
 # Hype Symbol Override Extension
  Override Symbol Instance Properties
 
- ![ExtensionHeadImage](README.assets/ExtensionHeadImage.jpg)
+ ![ExtensionHeadImage](README.assets/ExtensionHeadImage1.jpg)
 
 This Extension will run on Symbol Load (*HypeSymbolLoad*).
 
