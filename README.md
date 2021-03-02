@@ -2,9 +2,8 @@
  
 <hr>
 <div  style='background-color: #ddffdd'><strong>Thank You for your kind donation:</strong></div> 
+ <img width="118" alt="djon1" src="https://user-images.githubusercontent.com/6317734/109690714-8b69e200-7b7e-11eb-8fac-cb2cabe6abba.png">
 
-<img width="31" alt="djon" src="https://user-images.githubusercontent.com/6317734/109671916-68cecd80-7b6c-11eb-9636-d48c97c80a64.png">- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) **djon**  
-<hr>
 
 # Hype Symbol Override Extension
  Override Symbol Instance Properties
