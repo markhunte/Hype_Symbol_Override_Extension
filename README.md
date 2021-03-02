@@ -1,4 +1,8 @@
-*UPDATED  TO REFLECT CHANGES IN v1.1.3*
+
+<div  style='background-color: #ddffdd'><strong>Thank You for your kind donation:</strong></div> 
+
+<img width="31" alt="djon" src="https://user-images.githubusercontent.com/6317734/109671916-68cecd80-7b6c-11eb-9636-d48c97c80a64.png"> - **djon**  
+<hr>
 
 # Hype Symbol Override Extension
  Override Symbol Instance Properties
