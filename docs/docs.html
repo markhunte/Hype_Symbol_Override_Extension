@@ -25,12 +25,51 @@
       shape-outside: rectange(50%)!important;
        width: 208px!important;
       height: 208px!important;
-      
+   
     }	
  
+  
+ 	</style>
+ 	 
+ 	<script type="text/javascript"> function myCallback(hypeDocument, element, event){ 
  
+  window.myhypedocument = hypeDocument; 
+  
+  	    	
+	    	
+	    	var checkHash = function() { 
+ var hash = window.location.hash.substring(1); 
+ for(var i = 0; i < hypeDocument.sceneNames().length; i++) {
+ if(hypeDocument.sceneNames()[i] == hash) {
+ hypeDocument.showSceneNamed(hash);
+ break;
+ }
+ }
+ }; 
+ 
+ if (window.loadedHashLocation != true) { 
+ window.loadedHashLocation = true; 
+ checkHash(); 
+ window.onhashchange = checkHash; 
+ }
+ 
+ window.location.hash = "#" + hypeDocument.currentSceneName();
+    	
+ 
+  
+  
+  
+  
+  } 
 
-    	</style>
+if("HYPE_eventListeners" in window === false) {
+window.HYPE_eventListeners = Array();
+}
+
+
+window.HYPE_eventListeners.push({"type":"HypeSceneLoad", "callback":myCallback});
+</script>
+
 
 	<!-- end copy -->
   </head>
@@ -38,9 +77,221 @@
 	<!-- copy these lines to your document: -->
 
 	<div id="docs_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="docs.hyperesources/docs_hype_generated_script.js?96137"></script>
+		<script type="text/javascript" charset="utf-8" src="docs.hyperesources/docs_hype_generated_script.js?66740"></script>
 	</div>
 
 	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div>Quick Start</div>
+		<div>Rocket image by : Business psd created by rawpixel.com - www.freepik.com</div>
+		<div></div>
+		<div>Hype Symbol Override Extension</div>
+		<div>Hype Symbol Override Extension</div>
+		<div>    Sirlon Butt</div>
+		<div>    D - Rump</div>
+		<div>    Round</div>
+		<div>   Advanced</div>
+		<div>This extension gives you a way to easily override many of a Symbol instance's child element's perameters/properties</div>
+		<div>The Same Four instances running with the Extension.</div>
+		<div>As you have seen in the Quick Start or The Video,
+
+Individual Symbol instance properties can be overriden to allow each instance of the symbol to be displayed differently and behave differently from each other at load time. Each Symbol's child elements can be assigned a target property type.</div>
+		<div> The Extension can be downloaded from the  GitHub Read Me Page  > here
+</div>
+		<div>Four instances of a single Symbol on a Scene</div>
+		<div>fig1</div>
+		<div>hypeDocument.setElementProperty() API Property Names 
+</div>
+		<div>Example Values set on a Symbol Instance
+</div>
+		<div>By Default for these Property names, in fig 1 the Extension will try and use The hypeDocument.setElementProperty() API to override</div>
+		<div>Property Names can be for:
+  
+hypeDocument.setElementProperty() API property Names, css property Names, element HTML property Names.
+
+</div>
+		<div>fig2</div>
+		<div>data-bindingName: Properties ( hypeDocument.setElementProperty())
+</div>
+		<div>You can add duration timmings to any of the hypeDocument.setElementProperty() API that take them
+
+
+value : The property value to pass in for the override.
+</div>
+		<div>Values set on a Symbol Instance with duration
+</div>
+		<div>duration : The duration value for a hype API setElementProperty. (optional)
+This comes after the value and is separated by a comma.
+The duration value is here for completeness in reflection of the setElementProperty API usage.
+In most cases you will do any animaions on elements using the normal means within hype.
+But adding a duration here will also allow for the same type of animations afforded to using the setElementProperty in an Hype function. (see the Hype zipped example 2)
+</div>
+		<div>value, duration ( hypeDocument.setElementProperty())
+</div>
+		<div>data-bindingName | value, duration
+</div>
+		<div>Docs</div>
+		<div>data-bindingName: Properties ( css )
+</div>
+		<div>Here we  we set a text shadow and font size in percent
+</div>
+		<div>Remember that many css numbers are followed by ‘px’ in some cases you may need to enter a px. i.e  10px
+</div>
+		<div>When using css properties, In some cases if you are not getting the expected results, you may need to turn off Protect from external styles and/or set the Position with CSS left/top. Both of which can be found in the Document Inspector.
+</div>
+		<div>Here we  we set the background image of an Rect and some image properties
+</div>
+		<div>There are too many css Poroperties to show here but many of them can be used.
+
+
+</div>
+		<div>The extension will try and test for valid css properties and values entered as overrides.
+If they are found to be ok then they will be overriden as css properties
+</div>
+		<div>Original</div>
+		<div>New Text</div>
+		<div>As shown in the Quick Start pages, The data-bindingName and Value are entered into the Symbol’ instance Additionl HTML AttributesJust select the Symbol, taking care not to enter into it and go to the Identity Inspector. Click the + button and add a new data-BindingName and the corresponding Value.</div>
+		<div>data-bindingName override Values and Property names - Entry</div>
+		<div>The data-bindingName and Property names we want to override are entered into the Additional HTML Attributes of an Element inside a Symbol
+Just select the Symbol, taking care not to enter into it and go to the Identity Inspector. Click the + button and add a new data-BindingName and the corresponding Value.</div>
+		<div>Here we have a Hype video dropped onto the scene. We use the src property to change its video src and innerHTML to show its Title anc copyright url.
+
+The innnerHTML can be simple plain text like ‘ some foo bunny text’  It does not have to be complex or HTML code. 
+</div>
+		<div>For example, innerHTML, innerText, src  (Hype Audio/video object), borders etc..
+</div>
+		<div>Elements Properties can directly be overriden 
+
+
+</div>
+		<div>data-bindingName: Properties ( element )
+</div>
+		<div>Video Title</div>
+		<div>The Property Name:  The property Name to pass in for the override.
+</div>
+		<div>bindingName : Matching name on a Symbol’s child element
+</div>
+		<div>Construction of data-bindingName, Propertyname and Values</div>
+		<div>data-bindingName | Property value
+</div>
+		<div>The data-bindingName
+
+data- : All names must start with this.</div>
+		<div>bindingName : The arbitrary name you give to reference an element. this does not have to match any real id you have given to the element. But should reflect in some part the symbols target child element and real world property name so its intent is clear.
+</div>
+		<div>data-bindingName | Property Name
+</div>
+		<div>Property Value:  The property value to pass in for the override.
+</div>
+		<div>The data-bindingName and Property names we want to override are entered into the Additional HTML Attributes of an Element inside a Symbol 
+Just select the Symbol, taking care not to enter into it and go to the Identity Inspector. Click the + button and add a new data-BindingName and the corresponding Value.</div>
+		<div>You can add duration timmings to any of the hypeDocument.setElementProperty() API that take them
+
+</div>
+		<div>
+value : The property value to pass in for the override.
+</div>
+		<div>duration : The duration value for a hype API setElementProperty. (optional)
+This comes after the value and is separated by a comma.
+The duration value is here for completeness in reflection of the setElementProperty API usage.
+In most cases you will do any animaions on elements using the normal means within hype.
+But adding a duration here will also allow for the same type of animations afforded to using the setElementProperty in an Hype function. (see the Hype zipped example 2)
+</div>
+		<div>data-bindingName | value, duration
+</div>
+		<div>When using css properties, In some cases if you are not getting the expected results, you may need to turn off Protect from external styles and set the Position with CSS left/top. Both of which can be found in the Document Inspector.
+</div>
+		<div>Here we have a Hype video dropped onto the scene. We use the src property to change its video src and innerHTML to show its Title anc copyright url.
+
+
+</div>
+		<div>For example, innerHTML, innerText, src  (Hype Audio/video object), borders etc..
+</div>
+		<div>The innnerHTML can be simple plain text like ‘ some foo bunny text’  It does not have to be complex or HTML code. </div>
+		<div>Docs</div>
+		<div>But on the Symbol Instance we have it as data-text1_innerText1</div>
+		<div>Here we have a the dataBindingName spelt wrong.
+On the Symbol’s Child Element in the Symbol override. It is data-text1_innerText. 
+</div>
+		<div>Error Logging.An error will occur if there is a mismatch in the data-bindingName being used.
+An error will be thrown in the console giving details and info to help find the mismatch. Data for each error overide in a Symbol instance will be shown.
+Symbol ID
+Mismatched data-bindingName
+Symbol Instance Overrides Expected sent from the Symbol to the children elementsCompleted overrides data-bindingnames and values accepted by the children elements
+
+
+</div>
+		<div>Error Logging</div>
+		<div>On the Symbol’s Child Element in the Symbol override. It is data-text1_innerText. </div>
+		<div>Here we have a the dataBindingName spelt wrong.
+
+
+</div>
+		<div>Printing a debug log
+You can add the single javascript line hypeDocument.printDebugList() to normal  Hype Javascript function and run it on the  first scene’s onload. This will enable debug logs and  print to the console. It  will give the following data. This is handy if you are not getting the values where you expect.
+Data for each fully Completed overide for a Symbol instance will be shown.Symbol IDSymbol Instance Overrides Expected sent from the Symbol to the children elementsCompleted overrides data-bindingnames and values accepted by the children elements, including the property type the extension has used : Hype Api, css, Element , General  property types</div>
+		<div>Debug Logging</div>
+		<div>The data-bindingNamedata- : All names must start with this.
+bindingName : The arbitrary name you give to reference an element. this does not have to match any real id you have given to the element. But should reflect in some part the symbols target child element and real world property name so its intent is clear.
+
+The Property Name:  The property Name to pass in for the override.
+
+</div>
+		<div>The data-bindingName
+data- : All names must start with this.
+bindingName : Matching name on a Symbol’s child element
+The Value: The property value to pass in for the override.
+
+</div>
+		<div>data-bindingName | Property Name
+</div>
+		<div>data-bindingName | value
+</div>
+		<div>GitHub</div>
+		<div>For :  top  ,  left  ,  width  ,  height Remember to place px after the number as you normally would if using these css properties in a style. Example:    10px
+</div>
+		<div>Implicit Typecasting for CSS properties</div>
+		<div>For   background-image , contain the url inside a css url  container as you normally would if using these as a css property in a style . This should then let the extension treat the override as a css property override instead of Hype override.
+Example:
+url("https://avatars.githubusercontent.com/u/6317734?s=60&v=4”)
+or Image layering
+
+linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("https://avatars.githubusercontent.com/u/6317734?s=60&v=4")</div>
+		<div>As mentioned, There are properties that will default to the Hype API to override them.
+
+ top  ,  left  ,  width  ,  height  , background-image and opacity
+
+ It is recommended that you let this happen. But there may be an occasion where you want to use a css override rather than the Hype API.
+When you wish to override any of the properties that are the same as the Hype api named properties. 
+
+
+You must use the implicit naming of  css: in the override. i.e css:top ,  css:left,  css:width,  css:height,  css:opacity , css:background-image
+
+</div>
+		<div>For  background-image , contain the url inside a css url  container as you normally would if using these as a css property in a style . This should then let the extension treat the override as a css property override instead of Hype override.
+Example:
+url("https://avatars.githubusercontent.com/u/6317734?s=60&v=4”)
+
+
+or Image layering
+
+
+linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("https://avatars.githubusercontent.com/u/6317734?s=60&v=4")</div>
+		<div>Implicit Typecasting for CSS properties
+</div>
+		<div>For :  top  ,  left  ,  width  ,  height Remember to place px after the number as you normally would if using these css properties in a style.
+
+Example:    10px</div>
+
+	</div>
+
+	<!-- end text content: -->
+
   </body>
 </html>

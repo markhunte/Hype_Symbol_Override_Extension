@@ -3,7 +3,14 @@
  ++++++ SYMBOL OVERRIDE EXTENSION    ++++++
  
  By Mark Hunte 2021
- Versions: 1.1.3
+ Versions: 1.1.4
+ 
+ 1.1.4 changes. Put all Hype API properties in the exclude check. Must use css:propertyName when overriding css properties of same name.
+ This Fixed an issue with a bug in the CSS.support method. The use of a 0 as a value for left,top returns true when it should return false.
+ This result in top/left 0 values being resolved as valid css and bypassing the Hype API. a valid css should 0px. Using anything above 0 with no px
+ returns false as expect.
+ 
+ 
  MIT License
  Copyright (c) Mark Hunte 2021
  
@@ -141,7 +148,17 @@ if('symbolOverride' in window === false) window['symbolOverride'] = (function() 
                                 
                                 
                                 
-                                var property_Ar  = ['opacity','z-index']
+                                var property_Ar  =  ['hype',
+                                 'top',
+                                 'left',
+                                 'width',
+                                 'height',
+                                 'rotateZ',
+                                 'scaleX',
+                                 'scaleY',
+                                 'opacity',
+                                 'z-index',
+                                 'background-image']
                                 /* =======  Special cases, Will resolve as css always if we do not check here and Not as Hype API.
                                  Must explicitly name type as css: to override with CSS
                                  */
@@ -390,10 +407,10 @@ if('symbolOverride' in window === false) window['symbolOverride'] = (function() 
             overrides_completed.push({
                 
                 "Element id": thisElement.id,
-                "Element Key":key,
+                "Element data-BindgingName":key,
                 
                 
-                "Element target value":theDataSet[key],
+                "Element override value":theDataSet[key],
                 "css Type property" :css_,
                 "caseCondition ":caseCondition,
                 "property_": property_,
