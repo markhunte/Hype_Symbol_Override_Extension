@@ -24,7 +24,7 @@ For example you may be using a Symbol to display images and text but want differ
 Download the **symbolOverride.js** file above and place it you Hype Projects resources via the Resources panel.
 Or use the current CDN link in your head file.
 
-<script src="https://cdn.jsdelivr.net/gh/markhunte/Hype_Symbol_Override_Extension@main/symbolOverride.min.js"></script>
+`<script src="https://cdn.jsdelivr.net/gh/markhunte/Hype_Symbol_Override_Extension@main/symbolOverride.min.js"></script>`
 
 The extension will run on each Symbol at using the On Symbol load. You do not need to edit function  or use an action for this to happen.							
 
