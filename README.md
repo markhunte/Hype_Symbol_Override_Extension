@@ -22,6 +22,9 @@ For example you may be using a Symbol to display images and text but want differ
 
 <hr>
 Download the **symbolOverride.js** file above and place it you Hype Projects resources via the Resources panel.
+Or use the current CDN link in your head file.
+
+<script src="https://cdn.jsdelivr.net/gh/markhunte/Hype_Symbol_Override_Extension@main/symbolOverride.min.js"></script>
 
 The extension will run on each Symbol at using the On Symbol load. You do not need to edit function  or use an action for this to happen.							
 
@@ -46,7 +49,9 @@ This extension gives you a way to easily override many of a Symbol instance's ch
 <hr>
 `History`
 
-[Versions: v1.1.4](https://cdn.jsdelivr.net/gh/markhunte/Hype_Symbol_Override_Extension@1.1.4/symbolOverride.js)
+[Versions: v1.1.4](https://github.com/markhunte/Hype_Symbol_Override_Extension/releases/tag/v1.1.4)
+
+
 
 *v1.1.4 changes. Put all Hype API properties in the exclude check. Must use css:propertyName when overriding css properties of same name.`
 `This Fixed an issue with a bug in the CSS.support method. The use of a 0 as a value for left,top returns true when it should return false.`
@@ -56,6 +61,10 @@ This extension gives you a way to easily override many of a Symbol instance's ch
 [version: v1.1.3p](https://cdn.jsdelivr.net/gh/markhunte/Hype_Symbol_Override_Extension@1.1.3/symbolOverride.js)
 
 *Initial realease*
+
+
+
+[All Releases](https://github.com/markhunte/Hype_Symbol_Override_Extension/releases)
 
 
 
