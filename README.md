@@ -1,5 +1,5 @@
 
- 
+
 <hr>
 <div  style='background-color: #ddffdd'><strong>Thank You for your kind donation:</strong></div> 
  <img width="118" alt="djon1" src="https://user-images.githubusercontent.com/6317734/109690714-8b69e200-7b7e-11eb-8fac-cb2cabe6abba.png">
@@ -44,7 +44,15 @@ This extension gives you a way to easily override many of a Symbol instance's ch
  
 
 <hr>
+```
+History
 
+ Versions: 1.1.4
+v1.1.4 changes. Put all Hype API properties in the exclude check. Must use css:propertyName when overriding css properties of same name.
+This Fixed an issue with a bug in the CSS.support method. The use of a 0 as a value for left,top returns true when it should return false.
+This result in top/left 0 values being resolved as valid css and bypassing the Hype API. a valid css should 0px. Using anything above 0 with no px
+returns false as expect.
+```
 
 
 
