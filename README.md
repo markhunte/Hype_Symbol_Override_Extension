@@ -53,16 +53,18 @@ This extension gives you a way to easily override many of a Symbol instance's ch
 
 
 
-*v1.1.4 changes. Put all Hype API properties in the exclude check. Must use css:propertyName when overriding css properties of same name.`
-`This Fixed an issue with a bug in the CSS.support method. The use of a 0 as a value for left,top returns true when it should return false.`
-`This result in top/left 0 values being resolved as valid css and bypassing the Hype API. a valid css should 0px. Using anything above 0 with no px`
-`returns false as expect.*
+*v1.1.4 changes. Put all Hype API properties in the exclude check. Must use css:propertyName when overriding css properties of same name.
+ This Fixed an issue with a bug in the CSS.support method. The use of a 0 as a value for left,top returns true when it should return false.
+ This result in top/left 0 values being resolved as valid css and bypassing the Hype API. a valid css should 0px. Using anything above 0 with no px
+ returns false as expect.*
+
+<hr>
 
 [version: v1.1.3p](https://cdn.jsdelivr.net/gh/markhunte/Hype_Symbol_Override_Extension@1.1.3/symbolOverride.js)
 
 *Initial realease*
 
-
+<hr>
 
 [All Releases](https://github.com/markhunte/Hype_Symbol_Override_Extension/releases)
 
