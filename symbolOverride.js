@@ -259,8 +259,8 @@ if('symbolOverride' in window === false) window['symbolOverride'] = (function() 
                             //=======  STEMMING FUNCTION ======
                             if (typeof  hypeDocument.functions().stem == 'function') {
                                 
-                                //--now passing in symbol object to stemming 
-                                hypeDocument.functions().stem(hypeDocument, {'thisSymbol':thisSymbol,'theDataSet':theDataSet,'key':key,'thisElement':thisElement,'property_string':property_string,'caseCondition':caseCondition}, event)
+                                
+                                hypeDocument.functions().stem(hypeDocument, {'theDataSet':theDataSet,'key':key,'thisElement':thisElement,'property_string':property_string,'caseCondition':caseCondition}, event)
                                 
                             }
                             
