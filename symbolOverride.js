@@ -4,6 +4,7 @@
  
  By Mark Hunte 2021
  Versions: 1.1.4
+ /-
  
  1.1.4 changes. Put all Hype API properties in the exclude check. Must use css:propertyName when overriding css properties of same name.
  This Fixed an issue with a bug in the CSS.support method. The use of a 0 as a value for left,top returns true when it should return false.
@@ -258,7 +259,8 @@ if('symbolOverride' in window === false) window['symbolOverride'] = (function() 
                             //=======  STEMMING FUNCTION ======
                             if (typeof  hypeDocument.functions().stem == 'function') {
                                 
-                                hypeDocument.functions().stem(hypeDocument, { 'theDataSet':theDataSet,'key':key,'thisElement':thisElement,'property_string':property_string,'caseCondition':caseCondition}, event)
+                                //--now passing in symbol object to stemming 
+                                hypeDocument.functions().stem(hypeDocument, {'thisSymbol':thisSymbol,'theDataSet':theDataSet,'key':key,'thisElement':thisElement,'property_string':property_string,'caseCondition':caseCondition}, event)
                                 
                             }
                             
